@@ -7,9 +7,9 @@ GitHub 全站 star 排名前 K（当前 K = 2000）的仓库里，所有与 **LL
 
 *A curated, auto-updated map of the LLM / Agent projects among GitHub's top-K most-starred repositories.*
 
-- **看板**：`site/`，部署到 GitHub Pages 后在线访问。支持分类 / 组织 / 语言筛选，另有数据分析视图
+- **在线看板**：<https://sigangluo.github.io/github-llm-agent-topk/>，支持分类 / 组织 / 语言筛选，另有数据分析视图
 - **清单**：[PROJECTS.md](PROJECTS.md)，按分类整理，GitHub 上直接浏览
-- **数据**：[site/data/topk.json](site/data/topk.json)，完整数据，可直接下载
+- **数据**：[topk.json](https://sigangluo.github.io/github-llm-agent-topk/data/topk.json)（源文件 [site/data/topk.json](site/data/topk.json)），完整数据，可直接下载
 
 ## 收录范围
 
@@ -57,7 +57,7 @@ python3 scripts/build.py                       # 校验并重新生成站点数�
 python3 -m http.server -d site 8000            # 看板需要静态服务器，双击打开 HTML 读不到数据
 ```
 
-部署：仓库 Settings → Pages → Source 选「GitHub Actions」，之后 `site/` 有改动推送到 main 时，`deploy-pages.yml` 自动发布。
+部署：`site/` 有改动推送到 main 时，`deploy-pages.yml` 自动发布到 GitHub Pages。fork 后需在 Settings → Pages → Source 选「GitHub Actions」。
 
 ## 关于贡献
 
