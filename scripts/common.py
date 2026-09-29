@@ -16,6 +16,7 @@ RANKING_PATH = os.path.join(DATA_DIR, "ranking.json")
 CANDIDATES_PATH = os.path.join(DATA_DIR, "candidates.json")
 SITE_DATA_PATH = os.path.join(ROOT, "site", "data", "topk.json")
 PROJECTS_MD_PATH = os.path.join(ROOT, "PROJECTS.md")
+PROJECTS_MD_ZH_PATH = os.path.join(ROOT, "PROJECTS.zh-CN.md")
 
 
 def log(msg):

@@ -3,66 +3,84 @@
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](data/LICENSE)
 
-GitHub 全站 star 排名前 K（当前 K = 2000）的仓库里，所有与 **LLM / Agent** 相关的开源项目：两级分类、中文摘要，排名和 star 每周自动更新，新进榜的项目自动发现。
+**English** | [中文](README.zh-CN.md)
 
-*A curated, auto-updated map of the LLM / Agent projects among GitHub's top-K most-starred repositories.*
+A hand-curated map of every **LLM / agent** open-source project among GitHub's top-K most-starred repositories (currently K = 2000). Each project is sorted into a two-level taxonomy, has a short summary written from its README, and carries its real GitHub-wide star rank. Rankings and stars are refreshed regularly, and new entrants are found and reviewed.
 
-- **在线看板**：<https://sigangluo.github.io/github-llm-agent-topk/>，支持分类 / 组织 / 语言筛选，另有数据分析视图
-- **清单**：[PROJECTS.md](PROJECTS.md)，按分类整理，GitHub 上直接浏览
-- **数据**：[topk.json](https://sigangluo.github.io/github-llm-agent-topk/data/topk.json)（源文件 [site/data/topk.json](site/data/topk.json)），完整数据，可直接下载
+**Live dashboard: <https://sigangluo.github.io/github-llm-agent-topk/>**
 
-## 收录范围
+[![Project cards](docs/images/cards-en.png)](https://sigangluo.github.io/github-llm-agent-topk/)
 
-范围由**排名**决定（Top-K），而不是作者的口味；是否相关由人工逐个判断，客观数据全部由脚本从 GitHub 拉取。
+## What you can do
 
-- **收录**：核心功能与 LLM / Agent 直接相关的项目——模型、训练与推理、Agent 框架与产品、编码 Agent 及周边、技能 / 插件、RAG 与数据工具、以 LLM 为核心的垂类应用，以及相关教程与资源合集
-- **不收录**：纯图像 / 语音 / 视频生成、通用机器学习 / 视觉研究代码、通用基础设施、只是顺带接了点 AI 功能的软件；拿不准的不收
-- **官方 / 社区**：仓库所在的 GitHub 组织就是该公司本身才算「官方」；学术实验室、社区组织、已移交社区维护的项目一律算「社区」
+- **Browse** hundreds of projects grouped into 9 categories and 43 subcategories, with a sidebar table of contents. Every subcategory has a written definition of what belongs in it.
+- **See each project's real rank** among all GitHub repositories by stars, plus creation date, last push, main languages, and whether the repo is archived.
+- **Filter** by category tree, organization, code language, official vs community, or activity, and search names and summaries.
+- **Analyze** the landscape: category size and activity, new projects per quarter, language trends by creation year, official projects by company, and popular projects that went quiet.
+- **Switch language**: the whole UI and every summary are available in English and 中文.
+- **Reuse the data**: [`topk.json`](https://sigangluo.github.io/github-llm-agent-topk/data/topk.json) has everything; [PROJECTS.md](PROJECTS.md) is a browsable list right on GitHub.
 
-分类体系（9 个大类、43 个小类，含每类的边界定义）见 [data/taxonomy.json](data/taxonomy.json)。
+<table>
+<tr>
+<td width="50%"><img src="docs/images/filter-en.png" alt="Two-level category filter"><br><sub>Two-level category filter</sub></td>
+<td width="50%"><img src="docs/images/analysis-en.png" alt="Analysis view"><br><sub>Analysis view</sub></td>
+</tr>
+</table>
 
-## 目录结构
+## Scope
+
+The range is set by **rank** (top K by stars), not by taste. A human decides whether each repo is relevant; everything objective comes from the GitHub API.
+
+- **Included**: projects whose core function is directly about LLMs or agents: models, training and inference, agent frameworks and products, coding agents and their ecosystem, skills and plugins, RAG and data tooling, LLM-centered vertical apps, plus tutorials and awesome lists about them.
+- **Excluded**: pure image / speech / video generation, general ML or vision research code, general infrastructure, and software that only bolts on a bit of AI. When unsure, it stays out.
+- **Official vs community**: a repo is "official" only if its GitHub organization *is* the company itself. Academic labs, community orgs, and projects handed over to the community count as "community".
+
+The taxonomy, with a definition for each subcategory, is in [data/taxonomy.json](data/taxonomy.json).
+
+## Repository layout
 
 ```
 data/
-├── taxonomy.json      分类体系                      人工维护
-├── projects.json      已收录项目：分类、官方/社区、摘要  人工维护
-├── excluded.json      已审核、判定不相关的仓库          人工审核，脚本写入
-├── ranking.json       Top-K 排名快照                 scripts/rank.py 生成
-└── candidates.json    新进榜、待审核的仓库             scripts/candidates.py 生成
-scripts/               数据流水线，仅依赖 Python 3.9+ 标准库
-site/                  静态看板（纯 HTML / CSS / JS，无构建步骤）
-PROJECTS.md            分类清单，build.py 生成
+├── taxonomy.json      two-level taxonomy (English + Chinese)           hand-maintained
+├── projects.json      included projects: category, official, summaries  hand-maintained
+├── excluded.json      reviewed repos judged out of scope                reviewed by hand, written by script
+├── ranking.json       top-K ranking snapshot                            scripts/rank.py
+└── candidates.json    new entrants waiting for review                   scripts/candidates.py
+scripts/               data pipeline, Python 3.9+ standard library only
+site/                  static dashboard (plain HTML / CSS / JS, no build step)
+docs/images/           README screenshots
+PROJECTS.md            category list in English (PROJECTS.zh-CN.md in Chinese), generated by build.py
 ```
 
-`projects.json` 每项：`category`（小类 key）、`official`、`officialOrg`、`summary`（基于 README 撰写的中文摘要）、`added`（收录日期，缺省时自动填写）。star、创建时间、语言、名次等由 `build.py` 补全，不手写。
+Each entry in `projects.json` has `category` (subcategory key), `official`, `officialOrg`, `summary` (Chinese), `summary_en` (English), and `added` (filled in automatically). Stars, creation date, languages, and rank are added by `build.py`, never written by hand.
 
-## 更新数据
+## Updating the data
 
-由维护者定期手动更新：
+The maintainer updates it by hand on a regular schedule:
 
 ```bash
-export GH_TOKEN=...                            # 不勾选任何权限的 token 即可
-python3 scripts/candidates.py                  # 列出待审核仓库（详情在 data/candidates.json）
-# 相关的：在 data/projects.json 里加一条
-python3 scripts/candidates.py --exclude-rest   # 其余标记为不收录，以后不再出现
-python3 scripts/build.py                       # 校验并重新生成站点数据和 PROJECTS.md
+export GH_TOKEN=...                            # a token with no scopes is enough
+python3 scripts/rank.py                        # refresh the top-K ranking (--k 3000 to widen it)
+python3 scripts/candidates.py                  # list repos that need review (details in data/candidates.json)
+# for relevant ones, add an entry to data/projects.json
+python3 scripts/candidates.py --exclude-rest   # mark the rest as out of scope for good
+python3 scripts/build.py                       # validate, fetch live stats, regenerate site data and the lists
 ```
 
-扩大范围：`python3 scripts/rank.py --k 3000`，然后同样审核。只改了分类或摘要、不想联网：`build.py --offline`。
+`build.py --offline` regenerates from the previous live data when only categories or summaries changed.
 
-## 本地预览与部署
+## Run locally
 
 ```bash
-python3 -m http.server -d site 8000            # 看板需要静态服务器，双击打开 HTML 读不到数据
+python3 -m http.server -d site 8000            # the dashboard needs a static server; opening the HTML file directly can't load the data
 ```
 
-部署：`site/` 有改动推送到 main 时，`deploy-pages.yml` 自动发布到 GitHub Pages。fork 后需在 Settings → Pages → Source 选「GitHub Actions」。
+Pushes that change `site/` deploy to GitHub Pages through `.github/workflows/deploy-pages.yml`. If you fork this, set Settings → Pages → Source to "GitHub Actions".
 
-## 关于贡献
+## Contributing
 
-本项目由维护者个人维护，**不接受 Pull Request**（会直接关闭）。欢迎通过 issue 反馈问题或提出建议，但不保证回复和采纳。你也可以在遵守下方许可证的前提下自由 fork，按自己的口径维护一份。
+This is a personally maintained project. **Pull requests are not accepted** and will be closed. Issues with feedback or suggestions are welcome, though there's no guarantee of a reply or of adoption. You're free to fork it and keep your own version under the licenses below.
 
-## 许可证
+## License
 
-代码 [MIT](LICENSE)；数据（`data/`、`PROJECTS.md`、`site/data/`）[CC BY 4.0](data/LICENSE)，使用请注明来源。
+Code: [MIT](LICENSE). Data (`data/`, `PROJECTS*.md`, `site/data/`): [CC BY 4.0](data/LICENSE), please credit this project when you use it.
