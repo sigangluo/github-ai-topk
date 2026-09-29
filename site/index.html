@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLM & Agent Top-K</title>
+<meta name="description" content="GitHub 全站 star 排名前 K 的仓库中，所有 LLM / Agent 相关开源项目的分类图谱与数据分析。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/app.js" defer></script>
+</head>
+<body>
+<header>
+  <h1>LLM & Agent Top-K</h1>
+  <p>GitHub 全站 star 数前 <span data-k>K</span> 的仓库里，所有与 LLM / Agent 相关的开源项目：按「大类 / 小类」人工分类，每个项目附一段基于 README 的中文摘要。star 数与排名定期自动更新，新进榜的项目会被自动发现并进入审核。</p>
+  <div class="meta" id="meta">加载中…</div>
+  <div class="links"><a href="data/topk.json" download>下载完整数据（JSON）</a></div>
+</header>
+
+<div class="view-switch" role="group" aria-label="视图">
+  <button type="button" data-view="cards" aria-pressed="true">项目卡片</button>
+  <button type="button" data-view="analysis" aria-pressed="false">数据分析</button>
+</div>
+
+<div class="controls">
+  <span>排序：</span>
+  <button data-sort="stars" aria-pressed="true">Star 总数</button>
+  <button data-sort="created" aria-pressed="false">创建时间</button>
+  <button data-sort="fresh" aria-pressed="false">最近更新</button>
+</div>
+
+<div class="filter-bar">
+  <input type="search" id="searchInput" class="search-input" placeholder="搜索项目名或摘要关键词…">
+  <div class="filter-row" id="filterRow">
+    <div class="dropdown" id="statusDropdown">
+      <button class="dropdown-toggle" id="statusDropdownBtn" type="button">状态</button>
+      <div class="dropdown-menu" id="statusDropdownMenu" hidden></div>
+    </div>
+    <div class="dropdown" id="categoryDropdown">
+      <button class="dropdown-toggle" id="categoryDropdownBtn" type="button">分类</button>
+      <div class="dropdown-menu" id="categoryDropdownMenu" hidden></div>
+    </div>
+    <div class="dropdown" id="orgDropdown">
+      <button class="dropdown-toggle" id="orgDropdownBtn" type="button">组织</button>
+      <div class="dropdown-menu" id="orgDropdownMenu" hidden></div>
+    </div>
+    <div class="dropdown" id="langDropdown">
+      <button class="dropdown-toggle" id="langDropdownBtn" type="button">语言</button>
+      <div class="dropdown-menu" id="langDropdownMenu" hidden></div>
+    </div>
+    <button id="resetFilters" class="chip reset" hidden>✕ 重置筛选</button>
+  </div>
+</div>
+
+<aside class="toc" id="toc" aria-label="目录">
+  <div class="toc-head"><span>目录</span><button class="toc-btn" id="tocClose" type="button" title="收起目录">« 收起</button></div>
+  <nav class="toc-body" id="tocBody"></nav>
+</aside>
+<button class="toc-btn toc-open-btn" id="tocOpen" type="button" title="展开目录">☰ 目录</button>
+
+<div id="groupsContainer"></div>
+<div id="analysisView"></div>
+
+<footer class="page-foot">数据来源：GitHub API · 分类与摘要为人工整理</footer>
+</body>
+</html>

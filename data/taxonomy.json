@@ -1,0 +1,72 @@
+[
+ {"key": "app", "label": "Agent 应用", "def": "开箱即用、直接拿来用的 Agent / 聊天产品",
+  "subs": [
+   {"key": "assistant", "label": "个人 AI 助理", "def": "常驻运行在自己机器上、通过 IM 等多渠道触达的个人 Agent"},
+   {"key": "general-agent", "label": "通用 / 研究型 Agent", "def": "给一个目标即可自主规划执行的通用 Agent（Manus 类、深度研究类）"},
+   {"key": "gui-agent", "label": "GUI 操控 Agent", "def": "看屏幕、点界面，操作电脑 / 手机 / 网页的 Agent"},
+   {"key": "chat-client", "label": "聊天客户端", "def": "对接各家模型 API 或本地模型的聊天界面与桌面端"}
+  ]},
+ {"key": "coding", "label": "编码 Agent 生态", "def": "编码 Agent 本体，以及围绕 Claude Code / Codex 等的周边工具",
+  "subs": [
+   {"key": "coding-agent", "label": "编码 Agent", "def": "终端 / IDE 里读代码、改代码、跑命令的 Agent 本体"},
+   {"key": "agent-workbench", "label": "多 Agent 工作台", "def": "同时调度多个编码 Agent，按任务 / 看板 / 工作流协作"},
+   {"key": "harness-addon", "label": "客户端与配置增强", "def": "给现有编码 Agent 加 GUI、终端、HUD、移动端、配置模板、供应商切换"},
+   {"key": "code-intel", "label": "代码理解与评审", "def": "代码知识图谱、代码库打包、最新文档注入、自动代码评审"}
+  ]},
+ {"key": "skill", "label": "Agent 技能与方法论", "def": "装进现有 Agent 的 Skills / 插件 / 工作流规范",
+  "subs": [
+   {"key": "methodology", "label": "开发方法论", "def": "规范驱动开发、多角色流程等成体系的 Agent 工作方法"},
+   {"key": "skill-engineering", "label": "工程实践技能", "def": "编码习惯、规划、输出风格、安全审计等通用工程技能"},
+   {"key": "skill-design", "label": "设计与内容技能", "def": "UI 审美、图表、PPT、动效、配图、文案去 AI 味"},
+   {"key": "skill-domain", "label": "行业与知识工作技能", "def": "科研、营销、产品、安全、人物蒸馏等领域技能包"},
+   {"key": "skill-hub", "label": "技能库与插件市场", "def": "官方技能库、插件目录、技能合集清单与技能管理工具"}
+  ]},
+ {"key": "framework", "label": "Agent 开发框架与平台", "def": "自己动手搭 Agent / LLM 应用用的框架、平台和协议",
+  "subs": [
+   {"key": "dev-framework", "label": "代码框架 / SDK", "def": "用代码构建 Agent 与 LLM 应用的框架和 SDK"},
+   {"key": "lowcode", "label": "低代码 / 工作流平台", "def": "可视化编排 Agent、RAG 与自动化流程的平台"},
+   {"key": "protocol", "label": "协议与格式规范", "def": "MCP、A2A、AGENTS.md、SKILL.md 等开放协议、规范及其官方 SDK"},
+   {"key": "multi-agent-sim", "label": "多智能体仿真", "def": "让大量 Agent / 模型互动来模拟社会、推演趋势或群体决策"}
+  ]},
+ {"key": "component", "label": "Agent 基础组件", "def": "给 Agent 补上记忆、手脚和运行环境的组件",
+  "subs": [
+   {"key": "memory", "label": "记忆与上下文", "def": "跨会话持久记忆、知识图谱记忆、上下文数据库"},
+   {"key": "token-opt", "label": "Token 压缩", "def": "在内容进入上下文前做压缩 / 过滤，降低 token 消耗"},
+   {"key": "browser", "label": "浏览器自动化", "def": "给 Agent 用的浏览器、无头浏览器与浏览器操控 SDK"},
+   {"key": "tool-integration", "label": "MCP 与工具接入", "def": "MCP 服务器、工具集成平台、面向 Agent 的 CLI"},
+   {"key": "sandbox", "label": "沙箱与运行时", "def": "隔离执行 AI 生成代码 / Agent 的安全环境"}
+  ]},
+ {"key": "data", "label": "数据与检索", "def": "把外部数据变成 LLM 可用上下文：抓取、解析、检索",
+  "subs": [
+   {"key": "rag", "label": "RAG 与知识库", "def": "检索增强生成引擎、文档问答与企业知识库"},
+   {"key": "vector-db", "label": "向量数据库", "def": "向量存储与相似度检索"},
+   {"key": "web-crawl", "label": "网页抓取", "def": "把网页 / 社媒内容抓成 LLM 可读的 Markdown / JSON"},
+   {"key": "doc-parse", "label": "文档解析", "def": "PDF / Office 等文件转 Markdown、结构化信息抽取"},
+   {"key": "data-analysis", "label": "数据分析 / Text-to-SQL", "def": "用自然语言查询数据库与表格"}
+  ]},
+ {"key": "model-infra", "label": "模型与基础设施", "def": "模型本身，以及训练、推理、接入、观测的基础设施",
+  "subs": [
+   {"key": "model", "label": "开源模型", "def": "开源权重的基座 / 推理 / 代码 / 多模态模型"},
+   {"key": "local-infer", "label": "本地推理", "def": "在个人电脑 / 端侧设备上跑模型的引擎与工具"},
+   {"key": "serving", "label": "推理服务与加速", "def": "高吞吐推理服务引擎与底层注意力加速"},
+   {"key": "training", "label": "训练与微调", "def": "预训练、微调、强化学习后训练与模型改造"},
+   {"key": "gateway", "label": "API 网关与中转", "def": "统一多家模型 API、路由转发、订阅中转"},
+   {"key": "llmops", "label": "观测、评测与 Prompt 管理", "def": "LLM 应用的链路追踪、评测、红队与 Prompt 优化"}
+  ]},
+ {"key": "vertical", "label": "AI 垂类应用", "def": "面向具体行业 / 场景的 AI 应用",
+  "subs": [
+   {"key": "finance", "label": "金融与交易", "def": "选股、投研、量化交易"},
+   {"key": "content", "label": "内容与设计创作", "def": "视频、PPT、设计稿、社媒内容的生成与分发"},
+   {"key": "security", "label": "安全与渗透测试", "def": "自主渗透测试与漏洞验证"},
+   {"key": "intel", "label": "搜索、情报与舆情", "def": "AI 搜索引擎、新闻热点与舆情监控"},
+   {"key": "knowledge", "label": "知识管理与学习", "def": "笔记、NotebookLM 类工具、AI 辅导、论文翻译、会议纪要"},
+   {"key": "career", "label": "求职", "def": "职位筛选、简历优化与投递追踪"}
+  ]},
+ {"key": "learn", "label": "学习资源", "def": "教程、图书、Prompt 与 Awesome 合集",
+  "subs": [
+   {"key": "course-llm", "label": "LLM 原理与训练教程", "def": "从零实现 / 训练大模型的课程、图书与路线图"},
+   {"key": "course-agent", "label": "Agent 与应用开发教程", "def": "Agent、RAG、Prompt 工程、Claude Code 的教程与官方 Cookbook"},
+   {"key": "prompt", "label": "Prompt 与系统提示词", "def": "Prompt 库与各家 AI 产品的系统提示词合集"},
+   {"key": "awesome", "label": "Awesome 合集", "def": "项目 / 资源精选清单（技能类清单归入「技能库与插件市场」）"}
+  ]}
+]

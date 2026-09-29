@@ -1,0 +1,18 @@
+The contents of this directory — the taxonomy (taxonomy.json), the curated
+project list and summaries (projects.json), the exclusion list (excluded.json),
+and the derived rankings and candidate lists — are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+Copyright (c) 2026 sigangluo
+
+You are free to share and adapt this data for any purpose, including
+commercially, as long as you give appropriate credit (e.g. a link back to
+this repository), indicate if changes were made, and do not suggest the
+licensor endorses you or your use.
+
+Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by/4.0/
+
+Note: the underlying facts scraped from the GitHub API (star counts, creation
+dates, languages, etc.) are not themselves copyrightable; this license covers
+the original curation, categorization, and written summaries in this project.
