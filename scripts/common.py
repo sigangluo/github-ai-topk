@@ -11,12 +11,23 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT, "data")
 TAXONOMY_PATH = os.path.join(DATA_DIR, "taxonomy.json")
 PROJECTS_PATH = os.path.join(DATA_DIR, "projects.json")
-EXCLUDED_PATH = os.path.join(DATA_DIR, "excluded.json")
 RANKING_PATH = os.path.join(DATA_DIR, "ranking.json")
 CANDIDATES_PATH = os.path.join(DATA_DIR, "candidates.json")
+# 「不收录」清单由 github-fullstack-topk 与 github-ai-topk 共用，放在两个项目的上一级目录，不提交远程。
+# 里面的仓库是两个榜都审核过并判定不收录的；用环境变量 EXCLUDED_PATH 可以改位置。
+EXCLUDED_PATH = os.environ.get("EXCLUDED_PATH", os.path.join(os.path.dirname(ROOT), "excluded.json"))
 SITE_DATA_PATH = os.path.join(ROOT, "site", "data", "topk.json")
 PROJECTS_MD_PATH = os.path.join(ROOT, "PROJECTS.md")
 PROJECTS_MD_ZH_PATH = os.path.join(ROOT, "PROJECTS.zh-CN.md")
+# 姊妹项目（Full-Stack Top-K）的收录清单：两份列表互不重叠，已在那边收录的仓库这边不收。
+# 优先读本地同级目录（可能有还没推送的改动），找不到再读 GitHub 上的线上数据。
+SISTER_REPO = "sigangluo/github-fullstack-topk"
+SISTER_PROJECTS_PATH = os.environ.get(
+    "SISTER_PROJECTS_PATH",
+    os.path.join(os.path.dirname(ROOT), "github-fullstack-topk", "data", "projects.json"))
+SISTER_PROJECTS_URL = os.environ.get(
+    "SISTER_PROJECTS_URL",
+    f"https://raw.githubusercontent.com/{SISTER_REPO}/main/data/projects.json")
 
 
 def log(msg):
@@ -66,12 +77,43 @@ def load_projects():
 
 
 def load_excluded():
-    return set(load_json(EXCLUDED_PATH, {"repos": []})["repos"])
+    if not os.path.isfile(EXCLUDED_PATH):
+        log(f"警告：找不到共用的不收录清单 {EXCLUDED_PATH}，本次当作空清单（所有未收录的仓库都会被列为候选）")
+        return set()
+    return set(load_json(EXCLUDED_PATH)["repos"])
+
+
+_sister_cache = None
+
+
+def load_sister():
+    """姊妹列表已收录的仓库名（小写）。本地同级目录优先，其次线上数据；都拿不到时打印警告并返回空集合，
+    此时「不与姊妹项目重叠」的校验不会生效。"""
+    global _sister_cache
+    if _sister_cache is not None:
+        return _sister_cache
+    data, source = None, None
+    if os.path.isfile(SISTER_PROJECTS_PATH):
+        data, source = load_json(SISTER_PROJECTS_PATH), SISTER_PROJECTS_PATH
+    else:
+        try:
+            req = urllib.request.Request(SISTER_PROJECTS_URL, headers={"User-Agent": "github-ai-topk"})
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                data, source = json.loads(resp.read().decode("utf-8")), SISTER_PROJECTS_URL
+        except (urllib.error.URLError, TimeoutError, ValueError) as e:
+            log(f"警告：读不到姊妹项目的收录清单（本地 {SISTER_PROJECTS_PATH} 不存在，线上 {SISTER_PROJECTS_URL} 失败：{e}），"
+                "本次不会检查与 github-fullstack-topk 是否重叠")
+    if data is None:
+        _sister_cache = set()
+    else:
+        _sister_cache = {n.lower() for n in data}
+        log(f"姊妹项目清单：{len(_sister_cache)} 个（来源 {source}）")
+    return _sister_cache
 
 
 def save_excluded(names):
     save_json(EXCLUDED_PATH, {
-        "_note": "已人工审核过、判定与 AI（机器学习 / 深度学习 / LLM / Agent）无关的仓库（含通用基础设施、非学习类机器人整栈、通用科学计算等）。candidates.py 不会再把它们列为候选。",
+        "_note": "已被全栈榜（github-fullstack-topk）和 AI 榜（github-ai-topk）都审核过、判定不收录的仓库。本文件放在两个项目之外，只在本机使用，不提交远程；被任何一个榜收录的仓库不该出现在这里。",
         "repos": sorted(names, key=str.lower),
     })
 

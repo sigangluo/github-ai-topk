@@ -43,7 +43,6 @@ GitHub 全站 star 排名前 K（当前 K = 2000）的仓库里，所有与 **AI
 data/
 ├── taxonomy.json      两级分类体系（中英双语）              人工维护
 ├── projects.json      已收录项目：分类、官方/社区、中英摘要   人工维护
-├── excluded.json      已审核、判定不相关的仓库               人工审核，脚本写入
 ├── ranking.json       Top-K 排名快照                        scripts/rank.py 生成
 └── candidates.json    新进榜、待审核的仓库                   scripts/candidates.py 生成
 scripts/               数据流水线，仅依赖 Python 3.9+ 标准库

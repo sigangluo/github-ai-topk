@@ -8,14 +8,15 @@
 审核流程：
     1. 看 data/candidates.json（ai_hint=true 的排在前面，附 README 开头方便判断）；
     2. 相关的项目：在 data/projects.json 里加一条（category / official / officialOrg / summary）；
-    3. 剩下的无关项目：运行 --exclude-rest，写入 data/excluded.json，以后不会再出现；
+    3. 剩下的无关项目：运行 --exclude-rest，写入两个项目共用的 ../excluded.json（不提交远程），以后不会再出现。
+       这份清单两个榜共用：另一个榜也可能想收这些候选，所以要等两边都审核完再运行；
     4. 运行 python3 scripts/build.py 重新生成站点数据。
 """
 import argparse
 import base64
 import re
 
-from common import (CANDIDATES_PATH, GitHub, load_excluded, load_projects, load_ranking,
+from common import (CANDIDATES_PATH, GitHub, load_excluded, load_projects, load_ranking, load_sister,
                     log, save_excluded, save_json)
 
 # 只用来排序、提示「可能相关」，不做自动判定
@@ -48,6 +49,7 @@ def main():
     ranking = load_ranking()
     projects = load_projects()
     excluded = load_excluded()
+    sister = load_sister()
     in_rank = {r["name"] for r in ranking["repos"]}
     gh = None if args.no_details else GitHub()
 
@@ -59,7 +61,8 @@ def main():
             if meta and meta.get("full_name") and meta["full_name"] != old:
                 renamed[meta["full_name"]] = old
     pending = [r for r in ranking["repos"]
-               if r["name"] not in projects and r["name"] not in excluded and r["name"] not in renamed]
+               if r["name"] not in projects and r["name"] not in excluded and r["name"] not in renamed
+               and r["name"].lower() not in sister]
 
     if args.exclude_rest:
         save_excluded(excluded | {r["name"] for r in pending})

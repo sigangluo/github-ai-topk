@@ -43,7 +43,6 @@ The taxonomy, with a definition for each subcategory, is in [data/taxonomy.json]
 data/
 ├── taxonomy.json      two-level taxonomy (English + Chinese)           hand-maintained
 ├── projects.json      included projects: category, official, summaries  hand-maintained
-├── excluded.json      reviewed repos judged out of scope                reviewed by hand, written by script
 ├── ranking.json       top-K ranking snapshot                            scripts/rank.py
 └── candidates.json    new entrants waiting for review                   scripts/candidates.py
 scripts/               data pipeline, Python 3.9+ standard library only

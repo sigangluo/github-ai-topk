@@ -5,7 +5,7 @@
     python3 scripts/build.py            # 从 GitHub 拉取 star / 创建时间 / 最近推送 / 语言
     python3 scripts/build.py --offline  # 不联网，沿用上次的实时数据（只改了分类、摘要时用）
 
-输入：data/taxonomy.json、data/projects.json、data/excluded.json、data/ranking.json
+输入：data/taxonomy.json、data/projects.json、data/ranking.json，以及两个项目共用的不收录清单（项目上一级目录的 excluded.json）
 输出：site/data/topk.json（看板读取）、PROJECTS.md（英文）和 PROJECTS.zh-CN.md（中文），GitHub 上直接浏览的清单
 
 项目和分类都是中英双语：summary / summary_en，taxonomy 里的 label / def 和 label_en / def_en。
@@ -19,7 +19,7 @@ import re
 import sys
 
 from common import (PROJECTS_MD_PATH, PROJECTS_MD_ZH_PATH, PROJECTS_PATH, SITE_DATA_PATH, TAXONOMY_PATH, GitHub,
-                    load_excluded, load_json, load_projects, load_ranking, log, save_json)
+                    load_excluded, load_json, load_projects, load_ranking, load_sister, log, save_json)
 
 SITE_NAME = "AI Top-K"
 BATCH = 50           # 每个 GraphQL 请求查询的仓库数
@@ -33,6 +33,7 @@ REPO_FIELDS = """
 
 def validate(projects, taxonomy, excluded):
     subs = {s["key"] for major in taxonomy for s in major["subs"]}
+    sister = load_sister()
     errors = []
     for major in taxonomy:
         for node in [major] + major["subs"]:
@@ -58,6 +59,8 @@ def validate(projects, taxonomy, excluded):
             errors.append(f"{name}: official=true 时必须填 officialOrg")
         if name in excluded:
             errors.append(f"{name}: 同时出现在 projects.json 和 excluded.json")
+        if name.lower() in sister:
+            errors.append(f"{name}: 已被姊妹项目 github-fullstack-topk 收录，两份列表不能重叠")
     if errors:
         log("data/projects.json 校验失败：\n  " + "\n  ".join(errors))
         sys.exit(1)
