@@ -1,24 +1,24 @@
-# LLM & Agent Top-K
+# AI Top-K
 
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](data/LICENSE)
 
 [English](README.md) | **中文**
 
-GitHub 全站 star 排名前 K（当前 K = 2000）的仓库里，所有与 **LLM / Agent** 相关的开源项目，人工整理成一张图谱：两级分类、基于 README 撰写的中文摘要、真实的 GitHub 全站排名。排名和 star 数定期更新，新进榜的项目会被发现并审核。
+GitHub 全站 star 排名前 K（当前 K = 2000）的仓库里，所有与 **AI**（机器学习、深度学习、LLM、Agent）相关的开源项目，人工整理成一张图谱：两级分类、基于 README 撰写的中文摘要、真实的 GitHub 全站排名。排名和 star 数定期更新，新进榜的项目会被发现并审核。
 
-**在线看板：<https://sigangluo.github.io/github-llm-agent-topk/>**
+**在线看板：<https://sigangluo.github.io/github-ai-topk/>**
 
-[![项目卡片](docs/images/cards-zh.png)](https://sigangluo.github.io/github-llm-agent-topk/)
+[![项目卡片](docs/images/cards-zh.png)](https://sigangluo.github.io/github-ai-topk/)
 
 ## 能做什么
 
-- **浏览**：数百个项目按 9 个大类、43 个小类整理，带侧边目录；每个小类都写明了收录边界。
+- **浏览**：数百个项目按 10 个大类、54 个小类整理，带侧边目录；每个小类都写明了收录边界。
 - **看排名**：每个项目都标出它在 GitHub 全站按 star 的真实名次，以及创建时间、最近推送、主要语言、是否已归档。
 - **筛选**：按分类树、组织、编程语言、官方 / 社区、活跃度筛选，也可以搜索项目名和摘要。
 - **分析**：各分类的规模与活跃度、每季度新建项目数、按创建年份看语言变化、各公司官方出品、高 star 但已经沉寂的项目。
 - **切换语言**：整个界面和每一条摘要都有中文和 English 两个版本。
-- **复用数据**：[`topk.json`](https://sigangluo.github.io/github-llm-agent-topk/data/topk.json) 包含全部数据；[PROJECTS.zh-CN.md](PROJECTS.zh-CN.md) 是可直接在 GitHub 上浏览的清单。
+- **复用数据**：[`topk.json`](https://sigangluo.github.io/github-ai-topk/data/topk.json) 包含全部数据；[PROJECTS.zh-CN.md](PROJECTS.zh-CN.md) 是可直接在 GitHub 上浏览的清单。
 
 <table>
 <tr>
@@ -31,8 +31,8 @@ GitHub 全站 star 排名前 K（当前 K = 2000）的仓库里，所有与 **LL
 
 范围由**排名**决定（前 K 名），而不是作者的口味；是否相关由人工逐个判断，客观数据全部由脚本从 GitHub 拉取。
 
-- **收录**：核心功能与 LLM / Agent 直接相关的项目——模型、训练与推理、Agent 框架与产品、编码 Agent 及周边、技能 / 插件、RAG 与数据工具、以 LLM 为核心的垂类应用，以及相关教程与资源合集。
-- **不收录**：纯图像 / 语音 / 视频生成、通用机器学习 / 视觉研究代码、通用基础设施、只是顺带接了点 AI 功能的软件；拿不准的不收。
+- **收录**：核心功能是机器学习、深度学习、LLM 或 Agent 的项目。LLM / Agent 一侧：模型、训练与推理、Agent 框架与产品、编码 Agent 及周边、技能 / 插件、RAG 与数据工具、以 LLM 为核心的垂类应用；ML / DL 一侧：框架与训练库、计算机视觉与 OCR、语音与音频、图像与视频生成、经典 NLP 与预训练模型、强化学习与具身智能、标注与 MLOps 工具，以及 NumPy / pandas；外加这些方向的教程与资源合集。
+- **不收录**：通用基础设施（数据库、Web 框架等，即使 README 提到 AI）、核心不在学习的机器人 / 自动驾驶整栈、NumPy / pandas 之外的通用科学计算、只是顺带接了点 AI 功能的软件；拿不准的不收。
 - **官方 / 社区**：仓库所在的 GitHub 组织就是该公司本身才算「官方」；学术实验室、社区组织、已移交社区维护的项目一律算「社区」。
 
 分类体系和每个小类的边界定义见 [data/taxonomy.json](data/taxonomy.json)。

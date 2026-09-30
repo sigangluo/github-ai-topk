@@ -71,7 +71,7 @@ def load_excluded():
 
 def save_excluded(names):
     save_json(EXCLUDED_PATH, {
-        "_note": "已人工审核过、判定与 LLM / Agent 无关的仓库（含纯图像/语音/视频生成、通用 ML 研究代码等）。candidates.py 不会再把它们列为候选。",
+        "_note": "已人工审核过、判定与 AI（机器学习 / 深度学习 / LLM / Agent）无关的仓库（含通用基础设施、非学习类机器人整栈、通用科学计算等）。candidates.py 不会再把它们列为候选。",
         "repos": sorted(names, key=str.lower),
     })
 

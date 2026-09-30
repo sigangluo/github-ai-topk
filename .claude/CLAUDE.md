@@ -1,6 +1,6 @@
-# LLM & Agent Top-K
+# AI Top-K
 
-GitHub 全站 star 排名前 K 的仓库中，与 LLM / Agent 相关的开源项目，人工分类整理，附**中英双语**摘要。完整背景见 [README.md](../README.md)（英文）和 [README.zh-CN.md](../README.zh-CN.md)。
+GitHub 全站 star 排名前 K 的仓库中，与 AI（机器学习、深度学习、LLM、Agent）相关的开源项目，人工分类整理，附**中英双语**摘要。完整背景见 [README.md](../README.md)（英文）和 [README.zh-CN.md](../README.zh-CN.md)。
 
 ## 用户说「更新一下数据并推送」时，照这个流程走
 
@@ -29,9 +29,9 @@ python3 scripts/candidates.py           # 找出待审核的新仓库，写入 d
 
 ## 收录标准
 
-**收录**：核心功能与大语言模型或 Agent 直接相关，包括模型本身、训练与推理基础设施、Agent 框架与产品、编码 Agent 及其周边、Agent 技能/插件、RAG 与数据工具、以 LLM 为核心的垂类应用，以及相关教程、Prompt 和资源合集。
+**收录**：核心功能是机器学习、深度学习、大语言模型或 Agent。LLM / Agent 一侧包括模型本身、训练与推理基础设施、Agent 框架与产品、编码 Agent 及其周边、Agent 技能/插件、RAG 与数据工具、以 LLM 为核心的垂类应用；ML / DL 一侧包括训练框架、计算机视觉与 OCR、语音与音频、图像与视频生成、经典 NLP 与预训练模型、强化学习与具身智能、标注与 MLOps 工具，以及 NumPy / pandas；外加这些方向的教程、Prompt 和资源合集。
 
-**不收录**：纯图像/语音/视频生成模型与工具、通用机器学习/计算机视觉研究代码、通用基础设施（数据库、Web 框架等，即使 README 提到 AI）、核心功能与 LLM 无关只是顺带接了点 AI 功能的软件。
+**不收录**：通用基础设施（数据库、Web 框架等，即使 README 提到 AI）、核心不在学习的机器人 / 自动驾驶整栈、NumPy / pandas 之外的通用科学计算（matplotlib、polars 等）、只是顺带接了点 AI 功能的软件。
 
 **拿不准时偏保守，宁可漏收不要错收**——这是个标榜"精选"的列表，错误收录一个不相关项目比漏掉一个冷门项目更影响可信度，而且不会有人例行去检查 `data/excluded.json` 纠正误判。
 
@@ -59,12 +59,20 @@ python3 scripts/candidates.py           # 找出待审核的新仓库，写入 d
 | `modelcontextprotocol` | Model Context Protocol（官方组织，非某公司） |
 | `google-gemini`、`google-labs-code`、`google` | Google |
 | `ChromeDevTools` | Google Chrome |
+| `meta-llama`、`facebookresearch` | Meta |
+| `tensorflow`、`google-research`、`google-ai-edge` | Google |
+| `PaddlePaddle`、`baidu` | Baidu |
+| `ml-explore` | Apple |
+| `mozilla` | Mozilla |
+| `TencentARC` | Tencent |
+| `ultralytics`、`roboflow`、`Comfy-Org`、`black-forest-labs`、`Stability-AI`、`suno-ai`、`resemble-ai`、`myshell-ai`、`fishaudio`、`Lightning-AI`、`HumanSignal`、`hpcaitech`、`explosion`、`coqui-ai`、`invoke-ai`、`matterport`、`deezer`、`SYSTRAN`、`datalab-to`、`modular`、`tinygrad`、`zylon-ai`、`cursor`、`trycua`、`onlook-dev`、`wandb` | 与组织同名的公司或其产品公司 |
 
 不在表里的，判断该组织是否明显就是同名公司的官方账号，拿不准就标 `false`。**学术实验室（Stanford、Harvard、清华等）、独立社区组织，以及历史上由某公司发起、后来移交社区维护或所有权分散的项目（如 vLLM、DeepSpeed、verl-project）一律标 `false`**，即使 star 数很高、即使 README 提到了创始渊源——目的是全站口径一致，不是评判项目质量。
 
 ## 数据字段约定
 
 - `category`：必须是 `data/taxonomy.json` 里某个**小类**的 `key`（不是大类），不能自造新 key。要调整分类体系，需要同步改 `taxonomy.json` 和所有引用旧 key 的项目，`build.py` 会校验有没有孤儿引用。
+- **分类体系不是定死的，要跟着收录的项目走**：新增一批项目后，看各小类的数量分布——某个小类挤到二三十个就考虑拆开，长期只有个位数、又和邻近小类同性质就考虑合并；放不进任何小类的项目，说明需要新开小类，而不是硬塞。
 - `summary`（中文）和 `summary_en`（英文）：客观摘要，基于项目 README 撰写（不是照抄 GitHub 一行仓库描述），不写营销语气；两份内容要一致，不是各写各的。英文用完整句子，不带中文；`build.py` 会校验 `summary_en` 非空且不含中文。
 - `officialOrg` 用公司的英文名（Alibaba、ByteDance、Tencent、Zhipu AI、Google……），两种语言的界面共用。
 - 分类体系每个节点有 `label`/`def`（中文）和 `label_en`/`def_en`（英文），新增或改名时四个字段都要填。

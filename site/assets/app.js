@@ -32,7 +32,7 @@
   // ---------- i18n ----------
   var I18N = {
     en: {
-      intro: 'Every LLM / agent open-source project among GitHub\'s top <span data-k></span> most-starred repositories, sorted by hand into categories and subcategories, each with a short summary based on its README. Stars and rankings are refreshed regularly, and new entrants are found and reviewed.',
+      intro: 'Every AI open-source project (machine learning, deep learning, LLMs, and agents) among GitHub\'s top <span data-k></span> most-starred repositories, sorted by hand into categories and subcategories, each with a short summary based on its README. Stars and rankings are refreshed regularly, and new entrants are found and reviewed.',
       meta: function(o){ return o.n + ' projects · stars updated ' + o.g + ' · ranking snapshot ' + o.r; },
       download: 'Download full data (JSON)',
       view: 'View', viewCards: 'Projects', viewAnalysis: 'Analysis',
@@ -90,7 +90,7 @@
       days: function(n){ return n + ' days'; }
     },
     zh: {
-      intro: 'GitHub 全站 star 数前 <span data-k></span> 的仓库里，所有与 LLM / Agent 相关的开源项目：按「大类 / 小类」人工分类，每个项目附一段基于 README 的中文摘要。star 数与排名定期更新，新进榜的项目会被发现并审核收录。',
+      intro: 'GitHub 全站 star 数前 <span data-k></span> 的仓库里，所有与 AI（机器学习、深度学习、LLM、Agent）相关的开源项目：按「大类 / 小类」人工分类，每个项目附一段基于 README 的中文摘要。star 数与排名定期更新，新进榜的项目会被发现并审核收录。',
       meta: function(o){ return '共 ' + o.n + ' 个项目 · star 数据更新于 ' + o.g + ' · 全站排名快照 ' + o.r; },
       download: '下载完整数据（JSON）',
       view: '视图', viewCards: '项目卡片', viewAnalysis: '数据分析',

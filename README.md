@@ -1,24 +1,24 @@
-# LLM & Agent Top-K
+# AI Top-K
 
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](data/LICENSE)
 
 **English** | [中文](README.zh-CN.md)
 
-A hand-curated map of every **LLM / agent** open-source project among GitHub's top-K most-starred repositories (currently K = 2000). Each project is sorted into a two-level taxonomy, has a short summary written from its README, and carries its real GitHub-wide star rank. Rankings and stars are refreshed regularly, and new entrants are found and reviewed.
+A hand-curated map of every **AI** open-source project (machine learning, deep learning, LLMs, and agents) among GitHub's top-K most-starred repositories (currently K = 2000). Each project is sorted into a two-level taxonomy, has a short summary written from its README, and carries its real GitHub-wide star rank. Rankings and stars are refreshed regularly, and new entrants are found and reviewed.
 
-**Live dashboard: <https://sigangluo.github.io/github-llm-agent-topk/>**
+**Live dashboard: <https://sigangluo.github.io/github-ai-topk/>**
 
-[![Project cards](docs/images/cards-en.png)](https://sigangluo.github.io/github-llm-agent-topk/)
+[![Project cards](docs/images/cards-en.png)](https://sigangluo.github.io/github-ai-topk/)
 
 ## What you can do
 
-- **Browse** hundreds of projects grouped into 9 categories and 43 subcategories, with a sidebar table of contents. Every subcategory has a written definition of what belongs in it.
+- **Browse** hundreds of projects grouped into 10 categories and 54 subcategories, with a sidebar table of contents. Every subcategory has a written definition of what belongs in it.
 - **See each project's real rank** among all GitHub repositories by stars, plus creation date, last push, main languages, and whether the repo is archived.
 - **Filter** by category tree, organization, code language, official vs community, or activity, and search names and summaries.
 - **Analyze** the landscape: category size and activity, new projects per quarter, language trends by creation year, official projects by company, and popular projects that went quiet.
 - **Switch language**: the whole UI and every summary are available in English and 中文.
-- **Reuse the data**: [`topk.json`](https://sigangluo.github.io/github-llm-agent-topk/data/topk.json) has everything; [PROJECTS.md](PROJECTS.md) is a browsable list right on GitHub.
+- **Reuse the data**: [`topk.json`](https://sigangluo.github.io/github-ai-topk/data/topk.json) has everything; [PROJECTS.md](PROJECTS.md) is a browsable list right on GitHub.
 
 <table>
 <tr>
@@ -31,8 +31,8 @@ A hand-curated map of every **LLM / agent** open-source project among GitHub's t
 
 The range is set by **rank** (top K by stars), not by taste. A human decides whether each repo is relevant; everything objective comes from the GitHub API.
 
-- **Included**: projects whose core function is directly about LLMs or agents: models, training and inference, agent frameworks and products, coding agents and their ecosystem, skills and plugins, RAG and data tooling, LLM-centered vertical apps, plus tutorials and awesome lists about them.
-- **Excluded**: pure image / speech / video generation, general ML or vision research code, general infrastructure, and software that only bolts on a bit of AI. When unsure, it stays out.
+- **Included**: projects whose core function is machine learning, deep learning, LLMs, or agents. On the LLM and agent side: models, training and inference, agent frameworks and products, coding agents and their ecosystem, skills and plugins, RAG and data tooling, LLM-centered vertical apps. On the ML / DL side: frameworks and training libraries, computer vision and OCR, speech and audio, image and video generation, classic NLP and pretrained models, reinforcement learning and embodied AI, labeling and MLOps tools, and NumPy / pandas. Plus tutorials and awesome lists about any of these.
+- **Excluded**: general infrastructure (databases, web frameworks, and the like, even if the README mentions AI), robotics and autonomous-driving stacks whose core is not learning, general scientific computing beyond NumPy / pandas, and software that only bolts on a bit of AI. When unsure, it stays out.
 - **Official vs community**: a repo is "official" only if its GitHub organization *is* the company itself. Academic labs, community orgs, and projects handed over to the community count as "community".
 
 The taxonomy, with a definition for each subcategory, is in [data/taxonomy.json](data/taxonomy.json).
