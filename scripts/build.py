@@ -10,7 +10,7 @@
 
 项目和分类都是中英双语：summary / summary_en，taxonomy 里的 label / def 和 label_en / def_en。
 projects.json 里人工维护的字段（category / official / officialOrg / summary / summary_en）脚本只读不改；
-唯一例外是 added（收录日期）：缺省时自动填成今天，用来在看板上标记「新收录」。
+唯一例外是 added（收录日期）：缺省时自动填成今天。
 """
 import argparse
 import datetime
@@ -22,7 +22,6 @@ from common import (PROJECTS_MD_PATH, PROJECTS_MD_ZH_PATH, PROJECTS_PATH, SITE_D
                     load_excluded, load_json, load_projects, load_ranking, log, save_json)
 
 SITE_NAME = "AI Top-K"
-NEW_DAYS = 30        # 收录后多少天内算「新收录」
 BATCH = 50           # 每个 GraphQL 请求查询的仓库数
 REQUIRED = ("category", "official", "officialOrg", "summary", "summary_en")
 
@@ -199,7 +198,6 @@ def main():
 
     ranking["_by_name"] = {r["name"]: r["rank"] for r in ranking["repos"]}
     ranking["_stars"] = [r["stars"] for r in ranking["repos"]]
-    first_import = min(p["added"] for p in projects.values())
 
     out = []
     for name in names:
@@ -207,11 +205,9 @@ def main():
             continue
         p, l = projects[name], live[name]
         rank, estimated = rank_of(name, l["stars"], ranking)
-        added_days = (datetime.date.fromisoformat(generated_at) - datetime.date.fromisoformat(p["added"])).days
         out.append({
             "name": name, "category": p["category"], "official": p["official"], "officialOrg": p["officialOrg"],
             "summary": p["summary"], "summary_en": p["summary_en"], **l, "rank": rank, "rank_estimated": estimated, "added": p["added"],
-            "is_new": p["added"] > first_import and added_days <= NEW_DAYS,
         })
     out.sort(key=lambda p: -p["stars"])
 

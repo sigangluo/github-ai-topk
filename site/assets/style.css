@@ -187,7 +187,6 @@ section.group{ margin-top:26px; }
 }
 .badge.official{ background:var(--official-soft); color:var(--official); }
 .badge.community{ background:var(--surface-2); color:var(--text-muted); }
-.badge.new{ background:var(--accent-soft); color:var(--accent); }
 .badge.archived{ background:var(--warn-soft); color:var(--warn); }
 .empty-state code{ font-family:'JetBrains Mono',monospace; font-size:12px; background:var(--surface-2); padding:1px 5px; border-radius:4px; }
 header .links{ margin-top:6px; font-size:12px; }

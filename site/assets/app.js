@@ -42,10 +42,9 @@
       reset: '✕ Reset filters',
       toc: 'Contents', tocHide: '« Hide', tocHideTitle: 'Hide contents', tocOpen: '☰ Contents', tocOpenTitle: 'Show contents',
       footer: 'Data: GitHub API · categories and summaries curated by hand',
-      statusOfficial: 'Official only', statusActive: 'Active only (pushed in last 30 days)', statusNew: 'Added in last 30 days',
+      statusOfficial: 'Official only', statusActive: 'Active only (pushed in last 30 days)',
       catBtn: function(n){ return 'Category (' + n + ')'; },
       official: function(o){ return 'Official · ' + o; }, community: 'Community',
-      newBadge: 'New', newTitle: function(d){ return 'Added ' + d; },
       archived: 'Archived', archivedTitle: 'Archived by the author (read-only)',
       pushedRecent: 'Pushed within the last 30 days', pushedStale: function(n){ return 'No push for ' + n + ' days'; },
       rankOver: function(k){ return 'Below the GitHub top ' + k + ' star cutoff'; },
@@ -100,10 +99,9 @@
       reset: '✕ 重置筛选',
       toc: '目录', tocHide: '« 收起', tocHideTitle: '收起目录', tocOpen: '☰ 目录', tocOpenTitle: '展开目录',
       footer: '数据来源：GitHub API · 分类与摘要为人工整理',
-      statusOfficial: '仅官方出品', statusActive: '仅活跃维护（30 天内有推送）', statusNew: '仅近 30 天新收录',
+      statusOfficial: '仅官方出品', statusActive: '仅活跃维护（30 天内有推送）',
       catBtn: function(n){ return '分类 (' + n + ')'; },
       official: function(o){ return '官方 · ' + o; }, community: '社区',
-      newBadge: '新收录', newTitle: function(d){ return '收录于 ' + d; },
       archived: '已归档', archivedTitle: '仓库已被作者归档（只读）',
       pushedRecent: '最近 30 天内有推送', pushedStale: function(n){ return '已 ' + n + ' 天未推送'; },
       rankOver: function(k){ return 'Star 数低于 GitHub 全站 Top' + k + ' 门槛'; },
@@ -246,7 +244,6 @@
   var statusCounts = {
     official: data.filter(function(d){ return d.official; }).length,
     activeOnly: data.filter(function(d){ return d.fresh; }).length,
-    newOnly: data.filter(function(d){ return d.is_new; }).length,
   };
   var statusDd = setupDropdown({
     btnEl: document.getElementById('statusDropdownBtn'),
@@ -255,7 +252,6 @@
       return [
         { value:'official', label:t('statusOfficial'), count:statusCounts.official },
         { value:'activeOnly', label:t('statusActive'), count:statusCounts.activeOnly },
-        { value:'newOnly', label:t('statusNew'), count:statusCounts.newOnly },
       ].filter(function(it){ return it.count > 0; }).sort(function(a, b){ return b.count - a.count; });
     },
     filterSet: filters.status,
@@ -364,7 +360,6 @@
   function matchesFilters(d){
     if(filters.status.has('official') && !d.official) return false;
     if(filters.status.has('activeOnly') && !d.fresh) return false;
-    if(filters.status.has('newOnly') && !d.is_new) return false;
     if(filters.langs.size > 0 && !d.stacks.some(function(s){ return filters.langs.has(s); })) return false;
     if(filters.orgs.size > 0 && !filters.orgs.has(d.org)) return false;
     if(filters.q){
@@ -387,7 +382,6 @@
     var officialBadge = d.official
       ? '<span class="badge official">' + esc(t('official', d.officialOrg)) + '</span>'
       : '<span class="badge community">' + t('community') + '</span>';
-    if(d.is_new) officialBadge += '<span class="badge new" title="' + esc(t('newTitle', d.added)) + '">' + t('newBadge') + '</span>';
     if(d.archived) officialBadge += '<span class="badge archived" title="' + esc(t('archivedTitle')) + '">' + t('archived') + '</span>';
     var statusClass = d.fresh ? 'active' : 'stale';
     var statusTitle = d.fresh ? t('pushedRecent') : t('pushedStale', Math.round(d.freshDays));
