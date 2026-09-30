@@ -29,7 +29,7 @@ python3 scripts/candidates.py           # 找出待审核的新仓库，写入 d
 
 ## 收录标准
 
-**收录**：核心功能是机器学习、深度学习、大语言模型或 Agent。LLM / Agent 一侧包括模型本身、训练与推理基础设施、Agent 框架与产品、编码 Agent 及其周边、Agent 技能/插件、RAG 与数据工具、以 LLM 为核心的垂类应用；ML / DL 一侧包括训练框架、计算机视觉与 OCR、语音与音频、图像与视频生成、经典 NLP 与预训练模型、强化学习与具身智能、标注与 MLOps 工具，以及 NumPy / pandas；外加这些方向的教程、Prompt 和资源合集。
+**收录**：核心功能是机器学习、深度学习、大语言模型或 Agent。LLM / Agent 一侧包括模型本身、训练与推理基础设施、Agent 框架与产品、编码 Agent 及其周边、Agent 技能/插件、RAG 与数据工具、以 LLM 为核心的垂类应用；ML / DL 一侧包括训练框架、计算机视觉与 OCR、语音与音频、图像与视频生成、经典 NLP 与预训练模型、强化学习与具身智能、推荐系统、标注与 MLOps 工具，以及 NumPy / pandas；外加这些方向的教程、Prompt 和资源合集。
 
 **不收录**：通用基础设施（数据库、Web 框架等，即使 README 提到 AI）、核心不在学习的机器人 / 自动驾驶整栈、NumPy / pandas 之外的通用科学计算（matplotlib、polars 等）、只是顺带接了点 AI 功能的软件。
 

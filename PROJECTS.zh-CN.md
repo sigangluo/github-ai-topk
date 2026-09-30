@@ -1,20 +1,21 @@
 # AI Top-K 项目清单
 
 > 本文件由 `scripts/build.py` 自动生成，请勿手动修改。
-> GitHub 全站 star 排名前 2000 的仓库中，与 AI（机器学习、深度学习、LLM、Agent）相关的 **599** 个项目，按「大类 / 小类」整理。排名快照 2026-09-30，star 数更新于 2026-09-30。
+> GitHub 全站 star 排名前 2000 的仓库中，与 AI（机器学习、深度学习、LLM、Agent）相关的 **606** 个项目，按「大类 / 小类」整理。排名快照 2026-09-30，star 数更新于 2026-09-30。
 > English version: [PROJECTS.md](PROJECTS.md)
 
 ## 目录
 
-- [模型与任务](#模型与任务)（93）
+- [模型与任务](#模型与任务)（97）
   - [大语言与多模态模型](#大语言与多模态模型)（15）
-  - [预训练模型与经典 NLP](#预训练模型与经典-nlp)（9）
-  - [计算机视觉](#计算机视觉)（18）
+  - [预训练模型与经典 NLP](#预训练模型与经典-nlp)（10）
+  - [计算机视觉](#计算机视觉)（19）
   - [语音识别](#语音识别)（6）
   - [语音合成、声音转换与音频处理](#语音合成声音转换与音频处理)（20）
   - [图像与视频生成](#图像与视频生成)（12）
   - [图像增强与换脸](#图像增强与换脸)（10）
   - [强化学习与具身智能](#强化学习与具身智能)（3）
+  - [推荐系统](#推荐系统)（2）
 - [训练、推理与工具链](#训练推理与工具链)（71）
   - [框架与数值基础库](#框架与数值基础库)（19）
   - [训练与微调](#训练与微调)（9）
@@ -23,11 +24,11 @@
   - [API 网关与中转](#api-网关与中转)（14）
   - [观测、评测与 Prompt 管理](#观测评测与-prompt-管理)（5）
   - [标注、可视化与 Demo 工具](#标注可视化与-demo-工具)（6）
-- [数据与检索](#数据与检索)（43）
+- [数据与检索](#数据与检索)（44）
   - [RAG 与知识库](#rag-与知识库)（16）
   - [向量数据库](#向量数据库)（5）
   - [网页抓取](#网页抓取)（6）
-  - [文档解析与 OCR](#文档解析与-ocr)（13）
+  - [文档解析与 OCR](#文档解析与-ocr)（14）
   - [数据分析 / Text-to-SQL](#数据分析--text-to-sql)（3）
 - [Agent 基础组件](#agent-基础组件)（39）
   - [记忆与上下文](#记忆与上下文)（13）
@@ -45,8 +46,8 @@
   - [通用 / 研究型 Agent](#通用--研究型-agent)（10）
   - [GUI 操控 Agent](#gui-操控-agent)（5）
   - [聊天客户端](#聊天客户端)（14）
-- [编码 Agent 生态](#编码-agent-生态)（63）
-  - [编码 Agent](#编码-agent)（27）
+- [编码 Agent 生态](#编码-agent-生态)（64）
+  - [编码 Agent](#编码-agent)（28）
   - [多 Agent 工作台](#多-agent-工作台)（14）
   - [客户端与配置增强](#客户端与配置增强)（12）
   - [代码理解与评审](#代码理解与评审)（10）
@@ -63,10 +64,10 @@
   - [搜索、情报与舆情](#搜索情报与舆情)（4）
   - [知识管理与学习](#知识管理与学习)（7）
   - [求职](#求职)（3）
-- [学习资源](#学习资源)（104）
+- [学习资源](#学习资源)（105）
   - [LLM 原理与训练教程](#llm-原理与训练教程)（18）
   - [Agent 与应用开发教程](#agent-与应用开发教程)（18）
-  - [深度学习教程与论文精读](#深度学习教程与论文精读)（15）
+  - [深度学习教程与论文精读](#深度学习教程与论文精读)（16）
   - [机器学习与数据科学教程](#机器学习与数据科学教程)（20）
   - [Prompt 与系统提示词](#prompt-与系统提示词)（11）
   - [Awesome 合集](#awesome-合集)（22）
@@ -99,7 +100,7 @@
 
 ### 预训练模型与经典 NLP
 
-BERT 一类的预训练模型、序列建模工具包、传统 NLP 库，以及时序、金融等其他基础模型 · 9 个
+BERT 一类的预训练模型、序列建模工具包、传统 NLP 库，以及时序、金融等其他基础模型 · 10 个
 
 | 项目 | Stars | 全站排名 | 出品 | 简介 |
 |---|---:|---:|---|---|
@@ -111,11 +112,12 @@ BERT 一类的预训练模型、序列建模工具包、传统 NLP 库，以及�
 | [google-research/timesfm](https://github.com/google-research/timesfm) | 34k | #985 | 官方 · Google | Google Research 的时间序列基础模型，采用纯解码器结构预训练，用于零样本时序预测。 |
 | [explosion/spaCy](https://github.com/explosion/spaCy) | 33.9k | #990 | 官方 · Explosion | 面向生产环境的工业级 NLP 库，提供分词、词性标注、命名实体识别、依存分析和可训练的预训练流水线。 |
 | [facebookresearch/fairseq](https://github.com/facebookresearch/fairseq) 🗄️已归档 | 32.2k | #1081 | 官方 · Meta | Meta AI 的序列建模工具包，用于训练翻译、摘要、语言建模等文本生成模型，曾是 RoBERTa、wav2vec 等模型的官方实现。仓库已归档。 |
+| [NandhaKishorM/laya](https://github.com/NandhaKishorM/laya) | 29k | #1317 | 社区 | 多语言、非自回归的「系统 1」决策引擎：单次前向即可对任意文本做类型化选择、打分和是非判断，覆盖 100 多种语言，延迟约 33 毫秒，用强化学习配合严格合适的评分规则训练，并带有按请求选择检查点的路由器；提供 Python 包，可接入 LangChain、LlamaIndex、CrewAI 与 MCP。 |
 | [facebookresearch/fastText](https://github.com/facebookresearch/fastText) 🗄️已归档 | 26.5k | #1520 | 官方 · Meta | Meta 的高效词向量学习与文本分类库，训练速度快，提供多语种预训练词向量。仓库已归档。 |
 
 ### 计算机视觉
 
-目标检测、分割、人脸与姿态、视觉基础模型与 3D 视觉；OCR 引擎归入「文档解析与 OCR」 · 18 个
+目标检测、分割、人脸与姿态、视觉基础模型与 3D 视觉；OCR 引擎归入「文档解析与 OCR」 · 19 个
 
 | 项目 | Stars | 全站排名 | 出品 | 简介 |
 |---|---:|---:|---|---|
@@ -127,6 +129,7 @@ BERT 一类的预训练模型、序列建模工具包、传统 NLP 库，以及�
 | [roboflow/supervision](https://github.com/roboflow/supervision) | 51.1k | #481 | 官方 · Roboflow | 可复用的计算机视觉工具库，提供检测结果的统一数据结构、标注绘制、跟踪、区域计数与数据集处理，可对接多种检测模型。 |
 | [huggingface/pytorch-image-models](https://github.com/huggingface/pytorch-image-models) | 37.2k | #846 | 官方 · Hugging Face | timm：最大的 PyTorch 图像骨干网络与预训练权重集合，附训练、验证与推理脚本。 |
 | [google-ai-edge/mediapipe](https://github.com/google-ai-edge/mediapipe) | 37.1k | #849 | 官方 · Google | Google 的跨平台端侧机器学习方案，提供手部、人脸、姿态等实时感知的现成管线，也支持自定义模型与端侧生成式 AI。 |
+| [blakeblackshear/frigate](https://github.com/blakeblackshear/frigate) | 36.2k | #886 | 社区 | 面向 Home Assistant 的本地网络录像机（NVR），用 OpenCV 与 TensorFlow 对 IP 摄像头做实时目标检测，只在有运动的位置运行检测以节省资源，通过 MQTT 集成，支持 24/7 录制、按检测对象保留录像、RTSP 转流与 WebRTC，推荐搭配 GPU 或 AI 加速器。 |
 | [facebookresearch/detectron2](https://github.com/facebookresearch/detectron2) | 34.7k | #943 | 官方 · Meta | Meta AI 基于 PyTorch 的目标检测与分割平台，是 Detectron 的重写版，提供 Mask R-CNN 等大量算法和模型库。 |
 | [CMU-Perceptual-Computing-Lab/openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) | 34.5k | #956 | 社区 | 首个可实时检测多人身体、手部、面部和脚部关键点的开源库，提供 C++ 与 Python 接口。 |
 | [openai/CLIP](https://github.com/openai/CLIP) | 34.4k | #960 | 官方 · OpenAI | OpenAI 的图文对比预训练模型，把图像和文本映射到同一空间，可零样本地判断图像与文本描述的相关度，是多模态模型的重要基础。 |
@@ -161,7 +164,7 @@ BERT 一类的预训练模型、序列建模工具包、传统 NLP 库，以及�
 | [CorentinJ/Real-Time-Voice-Cloning](https://github.com/CorentinJ/Real-Time-Voice-Cloning) | 60.2k | #373 | 社区 | SV2TTS 的开源实现：用几秒参考音频克隆声音并实时合成任意文本，由说话人编码器、合成器和声码器三部分组成，源自作者的硕士论文。 |
 | [jamiepine/voicebox](https://github.com/jamiepine/voicebox) | 56k | #415 | 社区 | 本地运行的开源 AI 语音工作室，覆盖声音克隆、语音合成和全局听写，并提供 API，可让 Agent 用自定义声音说话。 |
 | [microsoft/VibeVoice](https://github.com/microsoft/VibeVoice) | 54.5k | #434 | 官方 · Microsoft | 微软的开源前沿语音 AI 系列，包含长文本多说话人语音合成和流式语音识别模型，支持自定义热词与多语种。 |
-| [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | 49.8k | #507 | 社区 | 完全本地运行的 ElevenLabs 开源替代，覆盖声音克隆、声音设计、视频配音、听写转写和有声书制作，宣称支持 600 多种语言。 |
+| [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | 49.9k | #507 | 社区 | 完全本地运行的 ElevenLabs 开源替代，覆盖声音克隆、声音设计、视频配音、听写转写和有声书制作，宣称支持 600 多种语言。 |
 | [coqui-ai/TTS](https://github.com/coqui-ai/TTS) | 46.1k | #582 | 官方 · Coqui | 面向研究与生产的文字转语音深度学习工具包，提供预训练多语种模型、XTTS 声音克隆与流式合成，以及训练和微调脚本。 |
 | [2noise/ChatTTS](https://github.com/2noise/ChatTTS) | 39.9k | #738 | 社区 | 面向日常对话场景的生成式语音模型，支持中英文、笑声与停顿等韵律控制；开源版本主要是算法与示例代码。 |
 | [suno-ai/bark](https://github.com/suno-ai/bark) | 39.3k | #761 | 官方 · Suno | Suno 的文本提示生成式音频模型，可合成多语种语音，并能生成笑声、叹气等非语言声音和简单音乐。 |
@@ -223,6 +226,15 @@ BERT 一类的预训练模型、序列建模工具包、传统 NLP 库，以及�
 | [openai/gym](https://github.com/openai/gym) 🗄️已归档 | 37.2k | #842 | 官方 · OpenAI | 经典的强化学习环境接口与基准集合。维护团队已将后续开发转到 Gymnasium，Gym 不再更新，仓库已归档。 |
 | [Genesis-Embodied-AI/genesis-world](https://github.com/Genesis-Embodied-AI/genesis-world) | 30k | #1223 | 社区 | 面向通用机器人与具身智能学习的仿真平台，集成统一的多物理引擎、照片级渲染器和跨平台编译器。 |
 | [huggingface/lerobot](https://github.com/huggingface/lerobot) | 27.9k | #1412 | 官方 · Hugging Face | Hugging Face 的机器人学习库，用 PyTorch 提供真实机器人可用的模型、数据集与工具，降低端到端学习的门槛。 |
+
+### 推荐系统
+
+推荐与排序系统的模型和线上服务代码，包括社交平台开源的信息流推荐算法 · 2 个
+
+| 项目 | Stars | 全站排名 | 出品 | 简介 |
+|---|---:|---:|---|---|
+| [twitter/the-algorithm](https://github.com/twitter/the-algorithm) | 74k | #252 | 官方 · X | X 推荐算法的源码：一组为 For You 时间线、搜索、探索和通知等产品界面提供内容排序服务的服务与作业，共享的数据、模型与软件框架都在仓库中，README 引导阅读工程博客了解整体原理。 |
+| [xai-org/x-algorithm](https://github.com/xai-org/x-algorithm) | 33.5k | #1019 | 官方 · xAI | X（推特）For You 信息流背后的核心代码：把关注账号的站内内容与通过机器学习检索发现的站外内容结合，按多种输入过滤后用 transformer 模型排序；仓库还包含 Phoenix 模型的训练代码与合成数据生成、SimClusters、可见性过滤和内容安全模型等。 |
 
 ## 训练、推理与工具链
 
@@ -288,7 +300,7 @@ BERT 一类的预训练模型、序列建模工具包、传统 NLP 库，以及�
 
 | 项目 | Stars | 全站排名 | 出品 | 简介 |
 |---|---:|---:|---|---|
-| [ollama/ollama](https://github.com/ollama/ollama) | 181.9k | #43 | 社区 | 本地运行大模型的命令行工具，一条命令即可下载并跑起 Kimi、GLM、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等主流开源模型，并能直接接入 Claude Code、OpenClaw、OpenCode、Codex、Copilot 等编码 Agent。 |
+| [ollama/ollama](https://github.com/ollama/ollama) | 182k | #43 | 社区 | 本地运行大模型的命令行工具，一条命令即可下载并跑起 Kimi、GLM、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等主流开源模型，并能直接接入 Claude Code、OpenClaw、OpenCode、Codex、Copilot 等编码 Agent。 |
 | [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) | 130k | #81 | 社区 | 用纯 C/C++ 实现的大模型推理引擎，基于自研的 ggml 张量库，几乎不依赖第三方库即可在 CPU/GPU/Apple Silicon 等各种硬件上跑量化后的 LLM，是本地部署生态里被最多上层工具（如 Ollama、LM Studio）复用的底层推理内核之一。 |
 | [mudler/LocalAI](https://github.com/mudler/LocalAI) | 49.3k | #515 | 社区 | 开源本地 AI 引擎，用一套 OpenAI/Anthropic/ElevenLabs 兼容 API 统一跑 LLM、视觉、语音、图像、视频等任意模态模型，按需拉取 llama.cpp/vLLM/whisper.cpp 等后端，内置支持工具调用、RAG、MCP 和技能的自主 Agent。 |
 | [exo-explore/exo](https://github.com/exo-explore/exo) | 47.7k | #548 | 社区 | 把多台设备连成一个 AI 集群本地跑大模型的工具，支持 Thunderbolt RDMA 直连降低设备间延迟、自动设备发现与拓扑感知的模型自动切分，兼容 OpenAI/Claude/Ollama API。 |
@@ -393,16 +405,16 @@ LLM 应用的链路追踪、评测、红队与 Prompt 优化 · 5 个
 
 | 项目 | Stars | 全站排名 | 出品 | 简介 |
 |---|---:|---:|---|---|
-| [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | 186.9k | #39 | 社区 | 面向 Agent 的网页抓取 API，能搜索、抓取并与网页交互，把内容转成干净的 Markdown 或结构化 JSON；号称覆盖 96% 的网页（含 JS 重度渲染页面）、P95 延迟 3.4 秒，自动处理代理轮换、限流和反爬，也提供开源自建和托管两种形态。 |
+| [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | 187k | #39 | 社区 | 面向 Agent 的网页抓取 API，能搜索、抓取并与网页交互，把内容转成干净的 Markdown 或结构化 JSON；号称覆盖 96% 的网页（含 JS 重度渲染页面）、P95 延迟 3.4 秒，自动处理代理轮换、限流和反爬，也提供开源自建和托管两种形态。 |
 | [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) | 86.3k | #180 | 社区 | 给 AI Agent“装上互联网能力”的工具，一个 CLI 即可读取和搜索 Twitter、Reddit、YouTube、GitHub、B 站、小红书等平台内容，零 API 费用。 |
 | [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | 84.6k | #186 | 社区 | 自适应网页抓取框架，解析器能随网站改版自动重新定位元素，内置反封锁抓取器可绕过 Cloudflare 等反爬机制，支持并发爬取与自动代理轮换。 |
-| [unclecode/crawl4ai](https://github.com/unclecode/crawl4ai) | 84.5k | #187 | 社区 | 面向 LLM 和 AI Agent 的开源网页爬虫，把任意网站转成干净的 LLM-ready Markdown，供 RAG、Agent 和数据管道使用，可自建也可用托管版 Crawl4AI Cloud。 |
+| [unclecode/crawl4ai](https://github.com/unclecode/crawl4ai) | 84.6k | #187 | 社区 | 面向 LLM 和 AI Agent 的开源网页爬虫，把任意网站转成干净的 LLM-ready Markdown，供 RAG、Agent 和数据管道使用，可自建也可用托管版 Crawl4AI Cloud。 |
 | [ScrapeGraphAI/Scrapegraph-ai](https://github.com/ScrapeGraphAI/Scrapegraph-ai) | 31.4k | #1138 | 社区 | 用 LLM 加图逻辑构建抓取流水线的 Python 网页爬虫库，说出想要提取的信息，库会自动处理网页/本地文档（XML/HTML/JSON/Markdown）解析。 |
 | [BuilderIO/gpt-crawler](https://github.com/BuilderIO/gpt-crawler) | 22.4k | #1972 | 社区 | 抓取网站生成知识文件用于创建自定义 GPT 的工具，输入一个或多个 URL 即可产出可直接上传给 OpenAI 自定义 GPT 的知识库文件。 |
 
 ### 文档解析与 OCR
 
-PDF / Office 等文件转 Markdown、结构化信息抽取；含 OCR 引擎 · 13 个
+PDF / Office 等文件转 Markdown、结构化信息抽取；含 OCR 引擎 · 14 个
 
 | 项目 | Stars | 全站排名 | 出品 | 简介 |
 |---|---:|---:|---|---|
@@ -414,7 +426,8 @@ PDF / Office 等文件转 Markdown、结构化信息抽取；含 OCR 引擎 · 1
 | [hiroi-sora/Umi-OCR](https://github.com/hiroi-sora/Umi-OCR) | 47.6k | #552 | 社区 | 免费离线的 OCR 桌面软件，支持截图识别、批量图片与 PDF 识别、排除水印和页眉页脚，并提供命令行与 HTTP 接口。 |
 | [datalab-to/marker](https://github.com/datalab-to/marker) | 40.1k | #723 | 官方 · Datalab | 把 PDF、图片、Office 与 EPUB 等文档快速转成 Markdown、JSON 和 HTML，保留表格、公式与版面，可选用 LLM 提升准确度。 |
 | [google/langextract](https://github.com/google/langextract) | 38.9k | #770 | 官方 · Google | Google 官方 Python 库，用 LLM 从非结构化文本中抽取结构化信息并做精确的原文溯源和交互式可视化，支持 Gemini 和本地 Ollama 模型。 |
-| [naptha/tesseract.js](https://github.com/naptha/tesseract.js) | 38.7k | #778 | 社区 | Tesseract OCR 的纯 JavaScript / WebAssembly 版本，可在浏览器和 Node.js 中识别 100 多种语言。 |
+| [naptha/tesseract.js](https://github.com/naptha/tesseract.js) | 38.8k | #778 | 社区 | Tesseract OCR 的纯 JavaScript / WebAssembly 版本，可在浏览器和 Node.js 中识别 100 多种语言。 |
+| [ocrmypdf/OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) | 34.9k | #939 | 社区 | 为扫描版 PDF 添加 OCR 文字层的命令行程序，使文档可搜索、可复制文字，基于 Tesseract，支持多语言、页面旋转与纠偏，默认输出 PDF/A，并默认使用多核并行处理。 |
 | [JaidedAI/EasyOCR](https://github.com/JaidedAI/EasyOCR) | 30k | #1217 | 社区 | 开箱即用的 Python OCR 库，支持 80 多种语言和多种文字，基于深度学习的检测与识别模型。 |
 | [opendataloader-project/opendataloader-pdf](https://github.com/opendataloader-project/opendataloader-pdf) | 29.4k | #1277 | 社区 | 面向 AI 数据提取的 PDF 解析器，输出带边界框的 Markdown、JSON 与 HTML，并支持 PDF 无障碍自动化处理。 |
 | [baidu/Unlimited-OCR](https://github.com/baidu/Unlimited-OCR) | 26.5k | #1518 | 官方 · Baidu | 百度的文档解析模型，主打一次性完成长文档的整体解析，并支持基于 ms-swift 的训练。 |
@@ -443,12 +456,12 @@ PDF / Office 等文件转 Markdown、结构化信息抽取；含 OCR 引擎 · 1
 | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | 95k | #145 | 社区 | 为 Claude Code、OpenClaw、Codex、Gemini、Hermes 等各类 Agent 提供跨会话持久记忆的压缩系统，自动捕获会话内容、用 AI 压缩后在未来会话中注入相关上下文。 |
 | [mem0ai/mem0](https://github.com/mem0ai/mem0) | 66.4k | #303 | 社区 | 为 AI Agent 提供的记忆层基础设施，即插即用地让上下文跨会话持久化，新版记忆算法在 LoCoMo、LongMemEval 等基准上大幅提升准确率和延迟表现。 |
 | [MemPalace/mempalace](https://github.com/MemPalace/mempalace) | 59.4k | #383 | 社区 | 号称“评测最充分的开源 AI 记忆系统”，本地优先、逐字存储、后端可插拔，在 LongMemEval 基准上做到 96.6% 召回且零 API 调用成本。 |
-| [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | 43.5k | #640 | 社区 | 面向学习型 Agent 的记忆系统，聚焦让 Agent 从经验中持续进步而非只是复述对话历史，在 LongMemEval 等基准上取得业界领先的长期记忆准确率。 |
+| [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight) | 43.6k | #640 | 社区 | 面向学习型 Agent 的记忆系统，聚焦让 Agent 从经验中持续进步而非只是复述对话历史，在 LongMemEval 等基准上取得业界领先的长期记忆准确率。 |
 | [volcengine/OpenViking](https://github.com/volcengine/OpenViking) | 39k | #768 | 官方 · ByteDance | 字节跳动火山引擎开源的 AI Agent 上下文数据库，把知识、记忆、技能统一组织成可浏览、可编辑的 viking:// 虚拟文件系统，替代“黑盒”式向量记忆。 |
 | [getzep/graphiti](https://github.com/getzep/graphiti) | 31.3k | #1145 | 社区 | 面向 AI Agent 的实时时序知识图谱框架，持续追踪事实随时间的变化并保留数据溯源，比传统 RAG 更适合处理不断演变的真实世界数据。 |
 | [topoteretes/cognee](https://github.com/topoteretes/cognee) | 31.2k | #1150 | 社区 | 开源 AI 记忆平台，把文档、代码、对话转成自托管知识图谱供 Agent 检索复用，可用免费小模型在 CPU 上本地跑，无需 API Key。 |
 | [supermemoryai/supermemory](https://github.com/supermemoryai/supermemory) | 31k | #1164 | 社区 | AI 记忆与上下文引擎，在 LongMemEval、LoCoMo、ConvoMem 三大权威基准上排名第一，95% 召回率、99.4% 上下文压缩率，可完全本地运行。 |
-| [garrytan/gbrain](https://github.com/garrytan/gbrain) | 30.4k | #1192 | 社区 | 给已在使用的 Agent 一份自己可控的记忆：保存带来源的明确事实，支持更正与撤回，并在多个 Agent 间共享。 |
+| [garrytan/gbrain](https://github.com/garrytan/gbrain) | 30.5k | #1192 | 社区 | 给已在使用的 Agent 一份自己可控的记忆：保存带来源的明确事实，支持更正与撤回，并在多个 Agent 间共享。 |
 | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | 29k | #1312 | 社区 | 面向编码 Agent 的持久化记忆工具，基于置信度评分、生命周期管理和知识图谱混合检索，支持 Claude Code、Copilot、Cursor 等主流工具。 |
 | [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) | 27.6k | #1429 | 官方 · Tencent | 腾讯云官方出品的团队级 Agent 记忆中枢，把对话、文档、代码沉淀成四类可复用记忆资产（对话记忆/技能/LLM-Wiki/代码图谱），跨 Agent 和框架共享治理。 |
 | [gastownhall/beads](https://github.com/gastownhall/beads) | 27.5k | #1432 | 社区 | 基于 Dolt 构建的分布式图结构 Issue 追踪器，给编码 Agent 提供持久化结构化记忆，替代容易丢上下文的 Markdown 计划文件，支持长周期任务跨机器同步。 |
@@ -534,7 +547,7 @@ MCP 服务器、工具集成平台、面向 Agent 的 CLI · 8 个
 | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) | 29.8k | #1243 | 官方 · OpenAI | OpenAI 官方出品的轻量级多智能体工作流框架，供应商无关，支持 OpenAI Responses/Chat Completions 及 100+ 其他 LLM，内置 Agent、沙箱 Agent 和实时 Agent 三类核心概念。 |
 | [huggingface/smolagents](https://github.com/huggingface/smolagents) | 29.6k | #1264 | 官方 · Hugging Face | Hugging Face 官方出品的极简 Agent 库，核心逻辑约 1000 行代码，主打“用代码而非 JSON 写行动”的 CodeAgent，支持沙箱执行和 Hub 分享。 |
 | [microsoft/semantic-kernel](https://github.com/microsoft/semantic-kernel) | 28.6k | #1347 | 官方 · Microsoft | Microsoft 官方出品的 LLM 应用集成 SDK，README 已提示项目演进为 Microsoft Agent Framework（企业级多 Agent 编排继任者），官方建议新用户迁移。 |
-| [mastra-ai/mastra](https://github.com/mastra-ai/mastra) | 28.4k | #1364 | 社区 | 现代 TypeScript 全栈 AI 应用与 Agent 框架，内置模型路由（40+ 供应商）、Agent、图式工作流引擎和人类介入能力，YC 背景团队出品。 |
+| [mastra-ai/mastra](https://github.com/mastra-ai/mastra) | 28.5k | #1364 | 社区 | 现代 TypeScript 全栈 AI 应用与 Agent 框架，内置模型路由（40+ 供应商）、Agent、图式工作流引擎和人类介入能力，YC 背景团队出品。 |
 | [vercel/ai](https://github.com/vercel/ai) | 27.1k | #1477 | 官方 · Vercel | Vercel 官方出品的 TypeScript AI 工具包（AI SDK），面向 Next.js/React/Svelte/Vue 等框架提供统一的多模型 Provider 架构，构建 AI 应用和 Agent。 |
 | [deepset-ai/haystack](https://github.com/deepset-ai/haystack) | 26.6k | #1509 | 社区 | 开源 AI 编排框架，用模块化管道构建具备检索、路由、记忆和生成能力的 Agent 工作流，面向可扩展的生产级 RAG 和对话系统。 |
 | [microsoft/JARVIS](https://github.com/microsoft/JARVIS) | 25.4k | #1635 | 官方 · Microsoft | Microsoft 早期研究项目 JARVIS/HuggingGPT，探索用 LLM 连接和调度 HuggingFace 模型社区完成复杂任务，附带 TaskBench、EasyTool 等后续研究成果。 |
@@ -591,8 +604,8 @@ MCP、A2A、AGENTS.md、SKILL.md 等开放协议、规范及其官方 SDK · 6 �
 
 | 项目 | Stars | 全站排名 | 出品 | 简介 |
 |---|---:|---:|---|---|
-| [openclaw/openclaw](https://github.com/openclaw/openclaw) | 390.8k | #6 | 社区 | 开源个人 AI 助理网关，跑在自己的电脑/服务器上，通过 Discord、iMessage、Slack、Teams、Telegram、WhatsApp 等 20+ 渠道聊天触达；模型与执行后端（Claude、Codex、本地模型）都是可替换插件，状态、记忆和密钥全部留在本地硬件，由独立的 OpenClaw 基金会（501c3）主导，无付费层、无托管服务。 |
-| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 250.2k | #19 | 社区 | Nous Research 出品的自我进化 Agent，内置学习闭环：从使用经验中生成技能、在使用中持续改进、主动沉淀知识并检索自己的历史对话；可跑在 5 美元 VPS、GPU 集群或按量计费的 serverless 上，支持 Telegram/Discord/Slack/WhatsApp/Signal/CLI 多入口，模型可在 Nous Portal、OpenRouter、OpenAI 等之间自由切换。 |
+| [openclaw/openclaw](https://github.com/openclaw/openclaw) | 390.9k | #6 | 社区 | 开源个人 AI 助理网关，跑在自己的电脑/服务器上，通过 Discord、iMessage、Slack、Teams、Telegram、WhatsApp 等 20+ 渠道聊天触达；模型与执行后端（Claude、Codex、本地模型）都是可替换插件，状态、记忆和密钥全部留在本地硬件，由独立的 OpenClaw 基金会（501c3）主导，无付费层、无托管服务。 |
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 250.3k | #19 | 社区 | Nous Research 出品的自我进化 Agent，内置学习闭环：从使用经验中生成技能、在使用中持续改进、主动沉淀知识并检索自己的历史对话；可跑在 5 美元 VPS、GPU 集群或按量计费的 serverless 上，支持 Telegram/Discord/Slack/WhatsApp/Signal/CLI 多入口，模型可在 Nous Portal、OpenRouter、OpenAI 等之间自由切换。 |
 | [odysseus-dev/odysseus](https://github.com/odysseus-dev/odysseus) | 87.7k | #178 | 社区 | 自托管的个人 AI 工作台，一个 Docker Compose 即可部署，集成聊天、Agent、研究、文档、邮件、笔记、日历等场景与本地模型工作流。 |
 | [moeru-ai/airi](https://github.com/moeru-ai/airi) | 49.9k | #503 | 社区 | 自托管的“你的AI伴侣”项目，目标是复刻 Neuro-sama 式虚拟角色，支持实时语音聊天、玩 Minecraft/Factorio，跨 Web/macOS/Windows。 |
 | [HKUDS/nanobot](https://github.com/HKUDS/nanobot) | 48.7k | #528 | 社区 | 超轻量、可自托管的 Python 个人 AI Agent 框架，内置 WebUI、终端和聊天应用（Telegram/Discord/微信/飞书等）三种入口，核心代码精简易读，集成长期记忆、MCP、多模型路由、多 Agent 委派、定时自动化和 OpenAI 兼容 API。 |
@@ -613,7 +626,7 @@ MCP、A2A、AGENTS.md、SKILL.md 等开放协议、规范及其官方 SDK · 6 �
 
 | 项目 | Stars | 全站排名 | 出品 | 简介 |
 |---|---:|---:|---|---|
-| [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | 240.8k | #21 | 官方 · DeepSeek | DeepSeek 官方开源的 Agent Harness（dsh），采用“一切皆插件”架构，底层基于 Cordis 框架构建；目前处于开发者预览阶段，API 会有破坏性变更，可通过 npx 直接启动带 Web UI 的本地服务。 |
+| [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | 240.9k | #21 | 官方 · DeepSeek | DeepSeek 官方开源的 Agent Harness（dsh），采用“一切皆插件”架构，底层基于 Cordis 框架构建；目前处于开发者预览阶段，API 会有破坏性变更，可通过 npx 直接启动带 Web UI 的本地服务。 |
 | [karpathy/autoresearch](https://github.com/karpathy/autoresearch) | 97k | #135 | 社区 | Andrej Karpathy 的实验性项目：让 AI Agent 在单张 GPU 上自动运行 nanochat 模型训练相关的研究工作，以虚构口吻记录“AI 自主搞科研”的过程。 |
 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 83.3k | #192 | 官方 · ByteDance | 字节跳动开源的长时程 SuperAgent Harness，通过沙箱、记忆、工具、技能、子 Agent 和消息网关的组合，编排能处理数分钟到数小时任务的研究/编码/创作型 Agent。 |
 | [FoundationAgents/OpenManus](https://github.com/FoundationAgents/OpenManus) | 58.4k | #390 | 社区 | MetaGPT 团队在 3 小时内搭建的开源版 Manus 复刻项目，无需邀请码即可体验类似 Manus 的通用 Agent 能力，仍在持续迭代中。 |
@@ -663,11 +676,12 @@ MCP、A2A、AGENTS.md、SKILL.md 等开放协议、规范及其官方 SDK · 6 �
 
 ### 编码 Agent
 
-终端 / IDE 里读代码、改代码、跑命令的 Agent 本体 · 27 个
+终端 / IDE 里读代码、改代码、跑命令的 Agent 本体 · 28 个
 
 | 项目 | Stars | 全站排名 | 出品 | 简介 |
 |---|---:|---:|---|---|
 | [anomalyco/opencode](https://github.com/anomalyco/opencode) | 211.1k | #25 | 社区 | 开源编码 Agent，提供跨平台命令行界面和处于 Beta 阶段的桌面应用，支持 npm/brew/scoop/choco/pacman/nix 等多种方式安装，覆盖 20+ 语言的本地化文档。 |
+| [ultraworkers/claw-code](https://github.com/ultraworkers/claw-code) | 195.3k | #31 | 社区 | claw 命令行 Agent 框架（harness）的公开 Rust 实现，仓库提供构建、认证、会话与奇偶校验等使用指南，支持接入本地 OpenAI 兼容模型与离线技能安装；项目自称是由 Agent 维护的「展品」，并建议实际工作使用 LazyCodex 或 Gajae-Code。 |
 | [anthropics/claude-code](https://github.com/anthropics/claude-code) | 148.7k | #60 | 官方 · Anthropic | Anthropic 官方出品的终端 Agentic 编码工具，理解代码库上下文、执行常规任务、解释复杂代码、处理 git 工作流，全部通过自然语言完成；也可在 IDE 中使用，或在 GitHub 里 @claude 触发。 |
 | [openai/codex](https://github.com/openai/codex) | 127.4k | #84 | 官方 · OpenAI | OpenAI 官方出品的轻量终端编码 Agent，可作为 CLI、IDE 插件（VS Code/Cursor/Windsurf）或桌面 App 使用，也有对应的云端版本 Codex Web。 |
 | [earendil-works/pi](https://github.com/earendil-works/pi) | 110.7k | #107 | 社区 | Pi Agent Harness 项目主页，包含自扩展的交互式编码 Agent CLI、带工具调用与状态管理的 Agent 运行时，以及统一多家模型（OpenAI/Anthropic/Google）的 LLM API 层。 |
@@ -682,7 +696,7 @@ MCP、A2A、AGENTS.md、SKILL.md 等开放协议、规范及其官方 SDK · 6 �
 | [continuedev/continue](https://github.com/continuedev/continue) | 36.1k | #894 | 社区 | 开源编码 Agent，可接入 IDE 或终端，支持自定义模型和规则，帮助开发者在保留控制权的前提下把 AI 编码能力集成进现有工作流。 |
 | [esengine/DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix) | 35.7k | #908 | 社区 | 面向终端的 DeepSeek 原生编码 Agent，围绕 prefix-cache 稳定性设计、可长时间挂机运行，单一 Go 二进制，支持终端/桌面/浏览器/编辑器（ACP）四种接入方式。 |
 | [TabbyML/tabby](https://github.com/TabbyML/tabby) | 33.9k | #994 | 社区 | 自托管 AI 编码助手，GitHub Copilot 的开源本地替代品，自包含无需数据库/云服务，支持消费级 GPU，正在孵化 Agent 私测版 Pochi。 |
-| [can1357/oh-my-pi](https://github.com/can1357/oh-my-pi) | 33.8k | #998 | 社区 | Stencil Labs 出品、fork 自 Pi 的编码 Agent，深度集成 IDE 能力，支持 60+ 模型供应商、31 种内置工具、14 种 LSP 操作，核心用 Rust 实现。 |
+| [can1357/oh-my-pi](https://github.com/can1357/oh-my-pi) | 33.9k | #998 | 社区 | Stencil Labs 出品、fork 自 Pi 的编码 Agent，深度集成 IDE 能力，支持 60+ 模型供应商、31 种内置工具、14 种 LSP 操作，核心用 Rust 实现。 |
 | [Pythagora-io/gpt-pilot](https://github.com/Pythagora-io/gpt-pilot) | 33.7k | #1008 | 社区 | 早期知名的“AI 全自动开发者”项目，能从需求描述自主写代码；⚠️ 仓库 2025-08~2026-06 期间曾被植入窃取凭据的供应链蠕虫恶意代码，已于 2026-06-11 清除，若在此期间克隆并运行过需立即轮换凭据。 |
 | [Twigpine/openclaude](https://github.com/Twigpine/openclaude) | 33.6k | #1015 | 社区 | 开源编码 Agent 命令行工具，一套终端工作流对接 OpenAI 兼容 API、Gemini、GitHub Models、Ollama 等云端与本地模型，支持工具、MCP 与斜杠命令。 |
 | [cursor/cursor](https://github.com/cursor/cursor) | 33.3k | #1035 | 官方 · Cursor | AI 编码编辑器 Cursor 的公开仓库，主要用于反馈问题与功能建议，并不包含产品源码。 |
@@ -701,7 +715,7 @@ MCP、A2A、AGENTS.md、SKILL.md 等开放协议、规范及其官方 SDK · 6 �
 
 | 项目 | Stars | 全站排名 | 出品 | 简介 |
 |---|---:|---:|---|---|
-| [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | 95k | #144 | 社区 | 开源的 AI Agent 团队编排应用，Node.js 服务端 + React 界面，让你像管理公司一样给一群 AI Agent 分配目标、追踪工作和成本——“如果 OpenClaw 是员工，Paperclip 就是公司”。 |
+| [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | 95.1k | #144 | 社区 | 开源的 AI Agent 团队编排应用，Node.js 服务端 + React 界面，让你像管理公司一样给一群 AI Agent 分配目标、追踪工作和成本——“如果 OpenClaw 是员工，Paperclip 就是公司”。 |
 | [OpenHands/OpenHands](https://github.com/OpenHands/OpenHands) | 89.6k | #173 | 社区 | 自托管的开发者控制台“Agent Canvas”，统一调度 OpenHands、Claude Code、Codex、Gemini 等任意 ACP 兼容 Agent，跨本地、远程和云端后端运行，可自动化生成报告并发布到 Slack 等日常研发任务。 |
 | [lobehub/lobehub](https://github.com/lobehub/lobehub) | 82.9k | #195 | 社区 | 定位为“首席 Agent 运营官”的平台，把你的一组 Agent 组织成 7×24 小时运转的团队，负责招募、排期和汇报，让你不用一直在线也能管理整个 AI 团队。 |
 | [stablyai/orca](https://github.com/stablyai/orca) | 82.1k | #200 | 社区 | 面向“并行 Agent 舰队”的 ADE（Agent 开发环境），可同时运行 Codex、Claude Code、OpenCode、Pi 等多个编码 Agent，各自独立 worktree，桌面端和移动端均可监控与远程操作。 |
@@ -709,7 +723,7 @@ MCP、A2A、AGENTS.md、SKILL.md 等开放协议、规范及其官方 SDK · 6 �
 | [multica-ai/multica](https://github.com/multica-ai/multica) | 51.7k | #475 | 社区 | 让人类和 AI 编码 Agent 像同一个团队协作的开源看板式工作区，Agent 领取任务、汇报进度、遇阻上报、提交评审，可自托管、兼容已有的各类 Agent CLI。 |
 | [Yeachan-Heo/oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) | 39.5k | #757 | 社区 | 面向团队的 Claude Code 多智能体编排工具，零学习曲线上手并行执行任务，同系列还有面向 Codex 的 oh-my-codex。 |
 | [Yeachan-Heo/oh-my-codex](https://github.com/Yeachan-Heo/oh-my-codex) | 33.4k | #1022 | 社区 | 面向 OpenAI Codex CLI 的工作流增强层，加钩子、Agent 团队、HUD 等能力，与同作者的 oh-my-claudecode 同源。 |
-| [iOfficeAI/AionUi](https://github.com/iOfficeAI/AionUi) | 33.2k | #1036 | 社区 | 开源 24/7 Cowork 应用，统一管理 OpenClaw、Hermes、Claude Code、Codex、OpenCode 等 20+ 命令行 Agent，可自定义并组队多个助理协同工作。 |
+| [iOfficeAI/AionUi](https://github.com/iOfficeAI/AionUi) | 33.3k | #1036 | 社区 | 开源 24/7 Cowork 应用，统一管理 OpenClaw、Hermes、Claude Code、Codex、OpenCode 等 20+ 命令行 Agent，可自定义并组队多个助理协同工作。 |
 | [BloopAI/vibe-kanban](https://github.com/BloopAI/vibe-kanban) | 28.2k | #1385 | 社区 | 面向编码 Agent 的看板任务管理工具，为 Claude Code、Codex、Gemini CLI 等 10+ 编码 Agent 分配独立工作区、审查 diff 并一键开 PR；项目已宣布即将停止维护（sunsetting）。 |
 | [eyaltoledano/claude-task-master](https://github.com/eyaltoledano/claude-task-master) | 28.1k | #1398 | 社区 | 面向 AI 驱动开发的任务管理系统，可接入 Cursor、Lovable、Windsurf、Roo 等任意 AI 编程工具，通过 MCP 提供任务拆解和跟踪。 |
 | [openai/symphony](https://github.com/openai/symphony) | 27.5k | #1440 | 官方 · OpenAI | OpenAI 官方实验性项目，把项目工作转成隔离的自主实现任务流，团队从“监督编码 Agent”转向“管理待完成工作”，附带 Elixir 参考实现。 |
@@ -779,14 +793,14 @@ MCP、A2A、AGENTS.md、SKILL.md 等开放协议、规范及其官方 SDK · 6 �
 
 | 项目 | Stars | 全站排名 | 出品 | 简介 |
 |---|---:|---:|---|---|
-| [mattpocock/skills](https://github.com/mattpocock/skills) | 272.6k | #15 | 社区 | 作者本人日常工程实践中实际使用的 Agent 技能合集，刻意做得小、易改、可组合、不绑定具体模型；可作为 Claude Code 插件整体订阅，也可以用 skills.sh 把可编辑的技能文件拷进项目自行魔改。 |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | 272.7k | #15 | 社区 | 作者本人日常工程实践中实际使用的 Agent 技能合集，刻意做得小、易改、可组合、不绑定具体模型；可作为 Claude Code 插件整体订阅，也可以用 skills.sh 把可编辑的技能文件拷进项目自行魔改。 |
 | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | 216k | #23 | 社区 | 把 Andrej Karpathy 关于 LLM 编码毛病的一条推文（乱假设不澄清、过度设计、动不必要的代码/注释）提炼成四条原则，做成单个 CLAUDE.md 文件，直接合并进项目即可改善 Claude Code 的行为。 |
 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 148.7k | #59 | 社区 | 一个让编码 Agent“少写代码”的技能：在真实 Claude Code 会话（FastAPI+React 仓库）上实测，平均减少约 54% 代码量、约 20% 花费和 27% 耗时，在 Agent 容易过度设计的场景（如日期选择器）最高减少 94%，同时保留必要的安全防护。 |
 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 100.1k | #128 | 社区 | 面向 AI 编码 Agent 的生产级工程技能合集，把资深工程师在需求定义、方案设计、编码、测试、评审到上线全流程中的最佳实践打包成可复用技能。 |
 | [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd) | 52.3k | #466 | 社区 | 让编码 Agent 别“绕圈子藏答案”的技能，强制输出先给结论、步骤编号，去掉“希望这对你有帮助”之类的废话。 |
 | [JCodesMore/ai-website-cloner-template](https://github.com/JCodesMore/ai-website-cloner-template) | 35.5k | #916 | 社区 | 网站克隆模板：给 AI 编码 Agent 一个网址，让它一键重建成 Next.js 应用，配合 Claude Code 等使用。 |
 | [OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files) | 27.2k | #1469 | 社区 | 面向 AI 编码 Agent 的持久化文件规划技能，把任务计划写在磁盘上的 Markdown 文件，即使上下文清空/崩溃/压缩也能恢复进度，支持 60+ Agent 的 Agent Skills 标准。 |
-| [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 23.3k | #1850 | 官方 · Cloudflare | Cloudflare 官方出品的安全审计编码 Agent 技能，六阶段流程（侦察→覆盖式搜寻→候选验证→结构化输出→独立复核→中立报告）孵化自 Cloudflare 自研的漏洞发现系统。 |
+| [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 23.4k | #1850 | 官方 · Cloudflare | Cloudflare 官方出品的安全审计编码 Agent 技能，六阶段流程（侦察→覆盖式搜寻→候选验证→结构化输出→独立复核→中立报告）孵化自 Cloudflare 自研的漏洞发现系统。 |
 
 ### 设计与内容技能
 
@@ -796,7 +810,7 @@ UI 审美、图表、PPT、动效、配图、文案去 AI 味 · 13 个
 |---|---:|---:|---|---|
 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 131.9k | #79 | 社区 | 为编码 Agent 提供 UI/UX 设计智能的技能，v2.0 核心功能是“设计系统生成器”：输入项目需求，AI 推理引擎几秒内生成一套完整、定制化的设计系统，兼容 Claude Code、Cursor、Codex、Copilot 等多个平台。 |
 | [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) | 118.9k | #96 | 社区 | 知名品牌与开发者网站设计系统的 DESIGN.md 合集，复制到项目里即可让 AI Agent 生成风格一致的页面。 |
-| [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | 91.4k | #156 | 社区 | 给 AI 编码 Agent“审美”的技能，防止生成千篇一律的模板化前端设计，定位为“反套路前端框架”。 |
+| [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | 91.5k | #156 | 社区 | 给 AI 编码 Agent“审美”的技能，防止生成千篇一律的模板化前端设计，定位为“反套路前端框架”。 |
 | [tt-a1i/archify](https://github.com/tt-a1i/archify) | 74.9k | #244 | 社区 | 给 Agent 用的架构图技能，把想法一键转成可交互、可验证的架构图/流程图/时序图，输出自包含的动效 HTML，支持导出。 |
 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | 72.8k | #264 | 社区 | 给 AI 编码 Agent 用的前端设计规范技能，含 1 个技能、24 个命令和 61 条确定性检测规则，防止所有模型都做出“千篇一律 SaaS 模板风”的界面。 |
 | [blader/humanizer](https://github.com/blader/humanizer) | 53k | #455 | 社区 | 去除 AI 生成文本“机器味”的 Agent 技能，基于维基百科编辑用来识别 AI 生成内容的《Signs of AI writing》准则构建，适用于 Claude Code、Codex 等支持技能的 Agent。 |
@@ -835,7 +849,7 @@ UI 审美、图表、PPT、动效、配图、文案去 AI 味 · 13 个
 | 项目 | Stars | 全站排名 | 出品 | 简介 |
 |---|---:|---:|---|---|
 | [anthropics/skills](https://github.com/anthropics/skills) | 179.1k | #46 | 官方 · Anthropic | Anthropic 官方的 Agent Skills 参考实现仓库，Skills 是 Claude 动态加载的一组指令、脚本和资源文件夹，用于在特定任务上教会 Claude 可复用的做法，涵盖品牌文档生成、企业专属数据分析工作流、个人任务自动化等场景。 |
-| [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) | 155.4k | #55 | 社区 | 源自一个 Reddit 帖子、持续迭代打磨的“人格化”专家 Agent 角色合集，每个角色有独立性格、工作流程和交付标准，可安装进 Claude Code、Cursor、Codex、Gemini 等工具；也有配套的跨平台桌面 App 一键浏览安装。 |
+| [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) | 155.5k | #55 | 社区 | 源自一个 Reddit 帖子、持续迭代打磨的“人格化”专家 Agent 角色合集，每个角色有独立性格、工作流程和交付标准，可安装进 Claude Code、Cursor、Codex、Gemini 等工具；也有配套的跨平台桌面 App 一键浏览安装。 |
 | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | 76k | #237 | 社区 | 收录 1000+ 生产可用 Claude Skills 和插件的精选列表，覆盖 Claude.ai、Claude Code 及 Codex、Cursor、Gemini CLI 等其他编码 Agent 的实际使用场景。 |
 | [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) | 52.9k | #458 | 社区 | 从 OpenClaw 官方技能注册中心（ClawHub）筛选、分类整理的 5000+ 社区技能合集，方便按类目发现和安装 OpenClaw 技能。 |
 | [sickn33/agentic-awesome-skills](https://github.com/sickn33/agentic-awesome-skills) | 47.1k | #558 | 社区 | 本地优先的技能发现与管理控制台（AAS Core），收录 2400+ 可安装 SKILL.md，提供 CLI、本地 MCP、目录浏览和 Workbench，帮助 Codex/Claude 在真正改动前先检索、圈定并预览要用的技能集。 |
@@ -880,11 +894,11 @@ UI 审美、图表、PPT、动效、配图、文案去 AI 味 · 13 个
 | [nexu-io/open-design](https://github.com/nexu-io/open-design) | 98.9k | #131 | 社区 | 开源的 Claude Design 替代品，本地优先桌面应用，把编码 Agent（Claude Code/Codex/Cursor/DeepSeek Harness 等 20+ CLI）变成设计引擎，可直接产出原型、着陆页、幻灯片等真实文件。 |
 | [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) | 62k | #350 | 社区 | 号称全球首个开源“agentic 视频制作系统”，包含 12 条生产流水线、100+ 工具和 700+ 技能/生产知识文件，把 AI 编码助手变成完整的视频制作工作室。 |
 | [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | 57.1k | #404 | 社区 | 把文档或主题自动转成原生 PowerPoint 演示文稿的 AI 工具，支持原生形状、转场动画、数据图表、基于演讲者备注的语音旁白，以及自定义 pptx 模板。 |
-| [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | 54.4k | #436 | 社区 | 把 HTML、CSS、媒体和可寻址动画渲染成确定性 MP4 视频的开源框架，可通过 CLI 本地使用、作为 AI 编码 Agent 的技能调用，或作为托管创作工作流背后的渲染内核。 |
+| [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | 54.5k | #436 | 社区 | 把 HTML、CSS、媒体和可寻址动画渲染成确定性 MP4 视频的开源框架，可通过 CLI 本地使用、作为 AI 编码 Agent 的技能调用，或作为托管创作工作流背后的渲染内核。 |
 | [gitroomhq/postiz-app](https://github.com/gitroomhq/postiz-app) | 36.5k | #871 | 社区 | 开源社媒排期与自动化工具，可通过 ChatGPT/Claude/Claude Code/Codex/Cursor 等 AI Agent 直接驱动发布，提供 Node SDK 和 n8n/Make.com 集成。 |
 | [DayuanJiang/next-ai-draw-io](https://github.com/DayuanJiang/next-ai-draw-io) | 36.1k | #893 | 社区 | 把 AI 与 draw.io 结合的 Next.js 网页应用，通过对话创建、修改和优化图表。 |
 | [FujiwaraChoki/MoneyPrinterV2](https://github.com/FujiwaraChoki/MoneyPrinterV2) | 32k | #1098 | 社区 | 自动化线上变现流程的应用，包含自动生成并上传短视频、Twitter 机器人、联盟营销等模块。 |
-| [Anil-matcha/Open-Generative-AI](https://github.com/Anil-matcha/Open-Generative-AI) | 29.4k | #1276 | 社区 | AI 视频平台的开源替代，接入 400 多个模型生成图像与视频，宣称无内容限制。 |
+| [Anil-matcha/Open-Generative-AI](https://github.com/Anil-matcha/Open-Generative-AI) | 29.5k | #1276 | 社区 | AI 视频平台的开源替代，接入 400 多个模型生成图像与视频，宣称无内容限制。 |
 | [ATH-MaaS/Pixelle-Video](https://github.com/ATH-MaaS/Pixelle-Video) | 28.5k | #1357 | 社区 | AI 全自动短视频引擎：输入主题即可自动撰写文案、生成配图或视频、合成配音并加背景音乐。 |
 | [browser-use/video-use](https://github.com/browser-use/video-use) | 27.8k | #1417 | 社区 | browser-use 团队出品的视频剪辑 Agent 技能，用 Claude Code 处理原始素材：去除口癖卡顿、自动调色、加字幕、生成动效转场并自我评估渲染效果。 |
 | [onlook-dev/onlook](https://github.com/onlook-dev/onlook) | 26.8k | #1497 | 官方 · Onlook | 面向设计师的 AI 优先设计工具，直接在代码库之上可视化设计和编辑前端界面。 |
@@ -922,7 +936,7 @@ AI 搜索引擎、新闻热点与舆情监控 · 4 个
 |---|---:|---:|---|---|
 | [siyuan-note/siyuan](https://github.com/siyuan-note/siyuan) | 46.6k | #568 | 社区 | 隐私优先、自托管的知识工作空间，让人类与 AI Agent 协作完成从想法到洞察的知识管理，支持 MCP，Docker/K8s 部署。 |
 | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 40.6k | #713 | 社区 | 终身个性化辅导 Agent，多语言界面，支持工作区知识库、图文材料上传、任务看板与对话恢复，围绕 LightRAG 构建教育场景的深度检索能力。 |
-| [lfnovo/open-notebook](https://github.com/lfnovo/open-notebook) | 39.6k | #747 | 社区 | 开源版 Notebook LM，私有、多模型、可 100% 本地部署，支持 18+ 模型供应商、PDF/音视频/网页等多模态内容整理、AI 播客生成和全文向量搜索。 |
+| [lfnovo/open-notebook](https://github.com/lfnovo/open-notebook) | 39.7k | #747 | 社区 | 开源版 Notebook LM，私有、多模型、可 100% 本地部署，支持 18+ 模型供应商、PDF/音视频/网页等多模态内容整理、AI 播客生成和全文向量搜索。 |
 | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 39.6k | #748 | 社区 | 清华大学出品的开放多智能体互动课堂，一键生成沉浸式多智能体学习体验，v1.0 新增 Agent Workbench，可从上传的资料自主规划课程、逐页构建并持续修订。 |
 | [PDFMathTranslate/PDFMathTranslate](https://github.com/PDFMathTranslate/PDFMathTranslate) | 37.3k | #838 | 社区 | 保留排版的科学 PDF 双语翻译工具（EMNLP 2025 Demo），支持公式、图表、目录、批注完整保留，提供 CLI/GUI/MCP/Docker/Zotero 多种接入方式，对接 Google/DeepL/Ollama/OpenAI 等翻译服务。 |
 | [Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily) | 31.3k | #1147 | 社区 | 隐私优先的 AI 会议助手，基于 Rust 用 Parakeet/Whisper 做本地实时转录、说话人分离，再用 Ollama 生成会议纪要，100% 本地处理。 |
@@ -954,7 +968,7 @@ LLM、Agent、机器学习与深度学习的教程、图书、Prompt 与 Awesome
 | [karpathy/nanoGPT](https://github.com/karpathy/nanoGPT) | 63.5k | #329 | 社区 | Karpathy 编写的最小化 GPT 训练与微调仓库，用几百行 PyTorch 复现 GPT-2 规模模型的训练。作者已说明该仓库过时，推荐改用 nanochat。 |
 | [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | 62.9k | #338 | 社区 | 从零开始、仅需几块钱成本和 2 小时训练时间即可训练出约 6400 万参数的超小语言模型 MiniMind，开源了预训练、SFT、LoRA、RLHF、蒸馏等大模型全流程的极简 PyTorch 实现，兼具复现项目与教程性质。 |
 | [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 62k | #348 | 社区 | 面向 AI 工程的系统性课程，523 节课覆盖深度学习、LLM、Agent、计算机视觉等主题，多语言翻译版本由机器翻译自动生成并提交到仓库。 |
-| [karpathy/nanochat](https://github.com/karpathy/nanochat) | 58.4k | #391 | 社区 | Andrej Karpathy 出品的最简 LLM 训练 Harness，单 GPU 节点即可跑通分词、预训练、微调、评估、推理全流程，用约 100 美元、8×H100 跑 2 小时即可训练出堪比 2019 年耗资 4.3 万美元的 GPT-2 级别模型。 |
+| [karpathy/nanochat](https://github.com/karpathy/nanochat) | 58.3k | #391 | 社区 | Andrej Karpathy 出品的最简 LLM 训练 Harness，单 GPU 节点即可跑通分词、预训练、微调、评估、推理全流程，用约 100 美元、8×H100 跑 2 小时即可训练出堪比 2019 年耗资 4.3 万美元的 GPT-2 级别模型。 |
 | [Lordog/dive-into-llms](https://github.com/Lordog/dive-into-llms) | 55.5k | #420 | 社区 | 上海交通大学《自然语言处理前沿技术》《人工智能安全技术》课程拓展而来的公益性大模型编程实践教程系列，覆盖数学推理、GUI Agent、大模型对齐等主题。 |
 | [karpathy/LLM101n](https://github.com/karpathy/LLM101n) 🗄️已归档 | 37.5k | #830 | 社区 | Andrej Karpathy 发起的教学项目，计划从零手把手（Python/C/CUDA）教你搭建一个类 ChatGPT 的故事生成 LLM，目前该课程仍在由 Eureka Labs 开发中，仓库处于归档状态。 |
 | [datawhalechina/happy-llm](https://github.com/datawhalechina/happy-llm) | 34.1k | #975 | 社区 | Datawhale 出品的系统性 LLM 教程，从 NLP 基础一路讲到手搭 LLaMA2、预训练/SFT/LoRA 微调全流程，直到 Agentic RL（GRPO/Search-R1/ReTool）。 |
@@ -994,7 +1008,7 @@ Agent、RAG、Prompt 工程、Claude Code 的教程与官方 Cookbook · 18 个
 
 ### 深度学习教程与论文精读
 
-深度学习的课程、图书、代码教程、论文复现与精读 · 15 个
+深度学习的课程、图书、代码教程、论文复现与精读 · 16 个
 
 | 项目 | Stars | 全站排名 | 出品 | 简介 |
 |---|---:|---:|---|---|
@@ -1003,6 +1017,7 @@ Agent、RAG、Prompt 工程、Claude Code 的教程与官方 Cookbook · 18 个
 | [scutan90/DeepLearning-500-questions](https://github.com/scutan90/DeepLearning-500-questions) | 57.6k | #398 | 社区 | 《深度学习 500 问》：以问答形式梳理概率、线性代数、机器学习、深度学习与计算机视觉等常见问题，也是同名出版物的开源版。 |
 | [aymericdamien/TensorFlow-Examples](https://github.com/aymericdamien/TensorFlow-Examples) | 43.7k | #635 | 社区 | 面向初学者的 TensorFlow 教程与示例，同时提供 Notebook 与源码，支持 TF v1 和 v2。 |
 | [floodsung/Deep-Learning-Papers-Reading-Roadmap](https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap) | 39.6k | #752 | 社区 | 给深度学习新人的论文阅读路线图，按主题与难度排列经典论文并附链接。 |
+| [google-research/google-research](https://github.com/google-research/google-research) | 38.9k | #774 | 官方 · Google | Google Research 发布的代码合集，收录各研究项目的代码与数据集（数据集采用 CC BY 4.0，代码采用 Apache 2.0）；仓库体量很大，建议只下载感兴趣的子目录。 |
 | [exacity/deeplearningbook-chinese](https://github.com/exacity/deeplearningbook-chinese) | 37.7k | #822 | 社区 | 《Deep Learning》（花书）的中文翻译，由社区协作翻译与校对，以 LaTeX 维护。 |
 | [mli/paper-reading](https://github.com/mli/paper-reading) | 33.9k | #992 | 社区 | 李沐的深度学习论文精读视频与笔记清单，逐段讲解经典与新论文，包括 Llama 3.1、Sora 等。 |
 | [yunjey/pytorch-tutorial](https://github.com/yunjey/pytorch-tutorial) | 32.5k | #1068 | 社区 | 面向深度学习研究者的 PyTorch 教程，多数模型只用 30 行左右代码实现，从基础到 GAN、图像描述等。 |
@@ -1023,7 +1038,7 @@ Agent、RAG、Prompt 工程、Claude Code 的教程与官方 Cookbook · 18 个
 | [microsoft/ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners) | 91.2k | #160 | 官方 · Microsoft | 微软的 12 周、26 课时经典机器学习课程，带 52 个测验，以 scikit-learn 为主，支持多语言。 |
 | [microsoft/AI-For-Beginners](https://github.com/microsoft/AI-For-Beginners) | 69.3k | #282 | 官方 · Microsoft | 微软的 12 周、24 课时人工智能入门课程，涵盖符号 AI、神经网络、计算机视觉与 NLP 等。 |
 | [Avik-Jain/100-Days-Of-ML-Code](https://github.com/Avik-Jain/100-Days-Of-ML-Code) | 51.8k | #474 | 社区 | 按 Siraj Raval 提出的「机器学习百日编程」整理的每日学习记录，含数据预处理、线性回归等主题的信息图与代码。 |
-| [jakevdp/PythonDataScienceHandbook](https://github.com/jakevdp/PythonDataScienceHandbook) | 50k | #498 | 社区 | 《Python 数据科学手册》全文的 Jupyter Notebook，讲解 IPython、NumPy、pandas、Matplotlib 与 scikit-learn。 |
+| [jakevdp/PythonDataScienceHandbook](https://github.com/jakevdp/PythonDataScienceHandbook) | 50.1k | #498 | 社区 | 《Python 数据科学手册》全文的 Jupyter Notebook，讲解 IPython、NumPy、pandas、Matplotlib 与 scikit-learn。 |
 | [GokuMohandas/Made-With-ML](https://github.com/GokuMohandas/Made-With-ML) | 49.7k | #509 | 社区 | 教你设计、开发、部署并迭代生产级机器学习应用的课程，涵盖 MLOps、测试与流水线。 |
 | [apachecn/ailearning](https://github.com/apachecn/ailearning) | 42.6k | #658 | 社区 | AiLearning：数据分析、机器学习实战、线性代数、PyTorch、NLTK 与 TF2 的中文学习路线与教程。 |
 | [fengdu78/Coursera-ML-AndrewNg-Notes](https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes) | 37.9k | #811 | 社区 | 斯坦福（吴恩达）机器学习课程的中文个人笔记，可在线阅读。 |
@@ -1073,7 +1088,7 @@ LLM、Agent、ML / DL / CV / NLP 方向的项目与资源精选清单（技能�
 | [github/awesome-copilot](https://github.com/github/awesome-copilot) | 39.5k | #754 | 官方 · GitHub | GitHub 官方维护的 Copilot 定制资源合集，收录社区贡献的自定义 Agent、指令、技能、Hook 和插件，配套可搜索的网站和面向 Agent 的 llms.txt。 |
 | [deepseek-ai/awesome-deepseek-integration](https://github.com/deepseek-ai/awesome-deepseek-integration) | 39.3k | #760 | 官方 · DeepSeek | DeepSeek 官方维护的第三方集成合集，收录把 DeepSeek API 接入各类主流软件（IM 插件、浏览器扩展、IDE 插件等）的方案列表。 |
 | [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 38.2k | #801 | 社区 | 按行业整理的 AI Agent 用例与项目合集，附框架说明与实现链接。 |
-| [ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code](https://github.com/ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code) | 37k | #855 | 社区 | 500 多个带代码的 AI、机器学习、深度学习、计算机视觉与 NLP 项目清单。 |
+| [ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code](https://github.com/ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code) | 37.1k | #855 | 社区 | 500 多个带代码的 AI、机器学习、深度学习、计算机视觉与 NLP 项目清单。 |
 | [hesamsheikh/awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases) | 31.7k | #1126 | 社区 | 社区收集的 OpenClaw 真实使用案例合集，覆盖社媒摘要、账号分析、自动化发帖等场景，提醒引用的第三方技能/插件未经审计需自行评估安全性。 |
 | [eugeneyan/applied-ml](https://github.com/eugeneyan/applied-ml) | 30.5k | #1190 | 社区 | 收集各公司分享的数据科学与机器学习生产实践的论文、文章与博客。 |
 | [e2b-dev/awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) | 30.2k | #1205 | 社区 | AI 自主 Agent 项目合集，区分开源项目与闭源产品/公司两部分，由 E2B（Code Interpreter 服务商）维护。 |

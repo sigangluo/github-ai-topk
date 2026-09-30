@@ -13,7 +13,7 @@ A hand-curated map of every **AI** open-source project (machine learning, deep l
 
 ## What you can do
 
-- **Browse** hundreds of projects grouped into 10 categories and 54 subcategories, with a sidebar table of contents. Every subcategory has a written definition of what belongs in it.
+- **Browse** hundreds of projects grouped into 10 categories and 55 subcategories, with a sidebar table of contents. Every subcategory has a written definition of what belongs in it.
 - **See each project's real rank** among all GitHub repositories by stars, plus creation date, last push, main languages, and whether the repo is archived.
 - **Filter** by category tree, organization, code language, official vs community, or activity, and search names and summaries.
 - **Analyze** the landscape: category size and activity, new projects per quarter, language trends by creation year, official projects by company, and popular projects that went quiet.
@@ -31,7 +31,7 @@ A hand-curated map of every **AI** open-source project (machine learning, deep l
 
 The range is set by **rank** (top K by stars), not by taste. A human decides whether each repo is relevant; everything objective comes from the GitHub API.
 
-- **Included**: projects whose core function is machine learning, deep learning, LLMs, or agents. On the LLM and agent side: models, training and inference, agent frameworks and products, coding agents and their ecosystem, skills and plugins, RAG and data tooling, LLM-centered vertical apps. On the ML / DL side: frameworks and training libraries, computer vision and OCR, speech and audio, image and video generation, classic NLP and pretrained models, reinforcement learning and embodied AI, labeling and MLOps tools, and NumPy / pandas. Plus tutorials and awesome lists about any of these.
+- **Included**: projects whose core function is machine learning, deep learning, LLMs, or agents. On the LLM and agent side: models, training and inference, agent frameworks and products, coding agents and their ecosystem, skills and plugins, RAG and data tooling, LLM-centered vertical apps. On the ML / DL side: frameworks and training libraries, computer vision and OCR, speech and audio, image and video generation, classic NLP and pretrained models, reinforcement learning and embodied AI, recommender systems, labeling and MLOps tools, and NumPy / pandas. Plus tutorials and awesome lists about any of these.
 - **Excluded**: general infrastructure (databases, web frameworks, and the like, even if the README mentions AI), robotics and autonomous-driving stacks whose core is not learning, general scientific computing beyond NumPy / pandas, and software that only bolts on a bit of AI. When unsure, it stays out.
 - **Official vs community**: a repo is "official" only if its GitHub organization *is* the company itself. Academic labs, community orgs, and projects handed over to the community count as "community".
 
