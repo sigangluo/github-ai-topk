@@ -8,7 +8,7 @@
 审核流程：
     1. 看 data/candidates.json（ai_hint=true 的排在前面，附 README 开头方便判断）；
     2. 相关的项目：在 data/projects.json 里加一条（category / official / officialOrg / summary）；
-    3. 剩下的无关项目：运行 --exclude-rest，写入两个项目共用的 ../excluded.json（不提交远程），以后不会再出现。
+    3. 剩下的无关项目：运行 --exclude-rest，写入两个项目共用的 ../top2000/excluded.json（不提交远程），以后不会再出现。
        这份清单两个榜共用：另一个榜也可能想收这些候选，所以要等两边都审核完再运行；
     4. 运行 python3 scripts/build.py 重新生成站点数据。
 """

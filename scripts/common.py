@@ -13,9 +13,9 @@ TAXONOMY_PATH = os.path.join(DATA_DIR, "taxonomy.json")
 PROJECTS_PATH = os.path.join(DATA_DIR, "projects.json")
 RANKING_PATH = os.path.join(DATA_DIR, "ranking.json")
 CANDIDATES_PATH = os.path.join(DATA_DIR, "candidates.json")
-# 「不收录」清单由 github-fullstack-topk 与 github-ai-topk 共用，放在两个项目的上一级目录，不提交远程。
+# 「不收录」清单由 github-fullstack-topk 与 github-ai-topk 共用，放在两个项目同级的 top2000/ 目录里，不提交远程。
 # 里面的仓库是两个榜都审核过并判定不收录的；用环境变量 EXCLUDED_PATH 可以改位置。
-EXCLUDED_PATH = os.environ.get("EXCLUDED_PATH", os.path.join(os.path.dirname(ROOT), "excluded.json"))
+EXCLUDED_PATH = os.environ.get("EXCLUDED_PATH", os.path.join(os.path.dirname(ROOT), "top2000", "excluded.json"))
 SITE_DATA_PATH = os.path.join(ROOT, "site", "data", "topk.json")
 PROJECTS_MD_PATH = os.path.join(ROOT, "PROJECTS.md")
 PROJECTS_MD_ZH_PATH = os.path.join(ROOT, "PROJECTS.zh-CN.md")

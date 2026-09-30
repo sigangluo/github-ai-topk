@@ -5,7 +5,7 @@
     python3 scripts/build.py            # 从 GitHub 拉取 star / 创建时间 / 最近推送 / 语言
     python3 scripts/build.py --offline  # 不联网，沿用上次的实时数据（只改了分类、摘要时用）
 
-输入：data/taxonomy.json、data/projects.json、data/ranking.json，以及两个项目共用的不收录清单（项目上一级目录的 excluded.json）
+输入：data/taxonomy.json、data/projects.json、data/ranking.json，以及两个项目共用的不收录清单（同级目录 top2000/excluded.json）
 输出：site/data/topk.json（看板读取）、PROJECTS.md（英文）和 PROJECTS.zh-CN.md（中文），GitHub 上直接浏览的清单
 
 项目和分类都是中英双语：summary / summary_en，taxonomy 里的 label / def 和 label_en / def_en。
